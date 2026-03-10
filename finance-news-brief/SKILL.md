@@ -140,10 +140,10 @@ description: >
 
 ## 第四步：生成 PDF
 
-运行以下命令将 Markdown 转换为带封面的正式 PDF：
+使用 Glob 工具搜索 `**/finance-news-brief/scripts/generate_pdf.py` 找到脚本路径，然后运行：
 
 ```bash
-python /Users/lh/invest/skills_dmeo/finance-news-brief/scripts/generate_pdf.py \
+python <generate_pdf.py的完整路径> \
   --input <markdown文件路径> \
   --output <pdf输出路径>
 ```
