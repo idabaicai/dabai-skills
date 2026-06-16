@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "skill_name": "week_report",
+    "skill_path": "/Users/liuhui/.claude/skills/week_report",
+    "executor_model": "claude-sonnet-4-6",
+    "analyzer_model": "claude-sonnet-4-6",
+    "timestamp": "2026-06-16T08:18:36Z",
+    "evals_run": ["git-only-no-context", "user-provided-context"],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "eval_name": "git-only-no-context",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 84.4,
+        "tokens": 28533,
+        "tool_calls": 26,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "输出包含5个章节（一至五）", "passed": true, "evidence": "输出中包含 一、二、三、四、五 标题"},
+        {"text": "不确定内容标注[待确认]而非编造", "passed": true, "evidence": "AID web/DecAgent 信息、AI心得、下周计划均标注了[待确认]"},
+        {"text": "全文使用中文", "passed": true, "evidence": "全文中文，技术术语适当保留英文"},
+        {"text": "遵循模板格式（项目、需求、上线计划结构）", "passed": true, "evidence": "包含 项目：、需求：、上线计划：等字段"}
+      ]
+    },
+    {
+      "eval_id": 0,
+      "eval_name": "git-only-no-context",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "time_seconds": 79.3,
+        "tokens": 19513,
+        "tool_calls": 19,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "输出包含5个章节（一至五）", "passed": true, "evidence": "输出包含 一、二、三、四、五 标题"},
+        {"text": "不确定内容标注[待确认]而非编造", "passed": false, "evidence": "编造了'构建week_report技能评估体系'等内容作为用户本周工作——meta内容，不是真实用户工作"},
+        {"text": "全文使用中文", "passed": true, "evidence": "全文中文"},
+        {"text": "遵循模板格式（项目、需求、上线计划结构）", "passed": true, "evidence": "包含 项目：、需求：字段"}
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "user-provided-context",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 28.8,
+        "tokens": 15471,
+        "tool_calls": 4,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "输出包含5个章节（一至五）", "passed": true, "evidence": "包含一至五完整章节"},
+        {"text": "正确识别项目名称为 AID web", "passed": true, "evidence": "项目：AID Web 正确出现"},
+        {"text": "AI心得部分包含 Codex 截图快捷键内容", "passed": true, "evidence": "二、AI 工作流心得包含'Codex'和'全屏截图快捷键'"},
+        {"text": "下周计划包含订阅功能", "passed": true, "evidence": "五、下周计划包含'AID Web 订阅功能开发'"},
+        {"text": "任务条目准确包含登录迁移、Google/Apple对接、SEO修复", "passed": true, "evidence": "需求中包含登录功能迁移、Google 登录对接、Apple 登录对接、修复 SEO 相关问题"}
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "user-provided-context",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 4,
+        "failed": 1,
+        "total": 5,
+        "time_seconds": 25.8,
+        "tokens": 12860,
+        "tool_calls": 2,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "输出包含5个章节（一至五）", "passed": false, "evidence": "使用 ## 二级标题格式，不符合公司模板的一、二、三、四、五格式"},
+        {"text": "正确识别项目名称为 AID web", "passed": true, "evidence": "AID Web 正确出现"},
+        {"text": "AI心得部分包含 Codex 截图快捷键内容", "passed": true, "evidence": "工具探索部分提到了 Codex 和全屏截图快捷键"},
+        {"text": "下周计划包含订阅功能", "passed": true, "evidence": "下周计划包含'订阅功能开发'"},
+        {"text": "任务条目准确包含登录迁移、Google/Apple对接、SEO修复", "passed": true, "evidence": "包含登录功能迁移、Google/Apple 登录对接、SEO 问题修复"}
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 56.6, "stddev": 27.8, "min": 28.8, "max": 84.4},
+      "tokens": {"mean": 22002, "stddev": 6531, "min": 15471, "max": 28533}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.78, "stddev": 0.02, "min": 0.75, "max": 0.80},
+      "time_seconds": {"mean": 52.6, "stddev": 26.8, "min": 25.8, "max": 79.3},
+      "tokens": {"mean": 16187, "stddev": 3327, "min": 12860, "max": 19513}
+    },
+    "delta": {
+      "pass_rate": "+0.22",
+      "time_seconds": "+4.0",
+      "tokens": "+5815"
+    }
+  },
+  "notes": [
+    "格式符合性（含一至五章节）是关键区分指标：without_skill 在有上下文时用了 ## 格式，不符合公司模板",
+    "内容准确性在两种配置下都表现较好，说明模型本身有提取信息的能力，技能主要在格式规范上起作用",
+    "关键差异：with_skill 正确使用 [待确认] 标注未知信息，without_skill 倾向于编造或猜测内容",
+    "with_skill 在纯 git 场景（eval-0）花费更多 tokens，因为技能引导它更仔细地读取 git 历史和检查模板"
+  ]
+}

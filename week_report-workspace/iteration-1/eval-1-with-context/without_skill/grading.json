@@ -1,0 +1,32 @@
+{
+  "eval_id": 1,
+  "run": "without_skill",
+  "expectations": [
+    {
+      "text": "输出包含5个章节（一至五）",
+      "passed": false,
+      "evidence": "使用 ## 二级标题格式（本周完成、下周计划、问题与风险），完全不符合公司模板的一、二、三、四、五格式"
+    },
+    {
+      "text": "正确识别项目名称为 AID web",
+      "passed": true,
+      "evidence": "AID Web 正确出现"
+    },
+    {
+      "text": "AI心得部分包含 Codex 截图快捷键内容",
+      "passed": true,
+      "evidence": "工具探索部分提到了 Codex 和全屏截图快捷键"
+    },
+    {
+      "text": "下周计划包含订阅功能",
+      "passed": true,
+      "evidence": "下周计划包含'订阅功能开发'"
+    },
+    {
+      "text": "任务条目准确包含登录迁移、Google/Apple对接、SEO修复",
+      "passed": true,
+      "evidence": "包含登录功能迁移、Google 登录对接、Apple 登录对接、SEO 问题修复"
+    }
+  ],
+  "pass_rate": 0.8
+}

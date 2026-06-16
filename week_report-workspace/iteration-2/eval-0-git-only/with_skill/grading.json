@@ -1,0 +1,11 @@
+{
+  "eval_id": 0,
+  "run": "with_skill",
+  "expectations": [
+    {"text": "输出包含5个章节（一至五）", "passed": true, "evidence": "包含一至五完整章节"},
+    {"text": "AI心得部分有实际内容（非[待确认]）", "passed": true, "evidence": "二、AI工作流心得包含2条具体技巧，无[待确认]"},
+    {"text": "AI心得推荐了2条技巧", "passed": true, "evidence": "1. 迁移检查清单技巧 2. CLAUDE.md项目规则技巧"},
+    {"text": "遵循模板格式（项目、需求结构）", "passed": true, "evidence": "包含项目：AID Web 和需求：字段"}
+  ],
+  "pass_rate": 1.0
+}

@@ -1,0 +1,27 @@
+{
+  "eval_id": 0,
+  "eval_name": "git-only-no-context",
+  "prompt": "帮我写周报（交互式，用户补充了工作内容）",
+  "assertions": [
+    {
+      "id": "five_sections",
+      "description": "输出包含5个章节（一至五）",
+      "check": "output contains 一、 and 二、 and 三、 and 四、 and 五、"
+    },
+    {
+      "id": "ai_insights_not_empty",
+      "description": "AI心得部分有实际内容（非[待确认]）",
+      "check": "output does not contain [待确认] in section 二"
+    },
+    {
+      "id": "ai_insights_two_tips",
+      "description": "AI心得推荐了2条技巧",
+      "check": "section 二 contains at least 2 distinct tips or points"
+    },
+    {
+      "id": "correct_format",
+      "description": "遵循模板格式（项目、需求结构）",
+      "check": "output contains 项目：and 需求："
+    }
+  ]
+}

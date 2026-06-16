@@ -1,0 +1,12 @@
+{
+  "eval_id": 1,
+  "run": "with_skill",
+  "expectations": [
+    {"text": "输出包含5个章节（一至五）", "passed": true, "evidence": "包含一至五完整章节"},
+    {"text": "正确识别项目名称为 AID web", "passed": true, "evidence": "项目：AID Web 正确出现"},
+    {"text": "AI心得包含用户提到的 Codex 技巧，并额外补充了1条", "passed": true, "evidence": "包含Codex全屏截图快捷键（用户原话）+ 迁移检查清单补充技巧"},
+    {"text": "下周计划包含订阅功能", "passed": true, "evidence": "五、下周计划包含'AID Web 订阅功能开发'"},
+    {"text": "任务条目准确包含登录迁移、Google/Apple对接、SEO修复", "passed": true, "evidence": "包含登录功能迁移、Google/Apple登录对接、修复SEO相关问题"}
+  ],
+  "pass_rate": 1.0
+}

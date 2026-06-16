@@ -1,0 +1,32 @@
+{
+  "eval_id": 1,
+  "eval_name": "user-provided-context",
+  "prompt": "我这周完成了 AID web 的登录功能迁移、Google 和 Apple 登录对接，还修复了一些 SEO 问题。Codex 用起来还挺好的，发现全屏截图快捷键很方便。下周准备做订阅功能。帮我整理成周报。",
+  "assertions": [
+    {
+      "id": "five_sections",
+      "description": "输出包含5个章节（一至五）",
+      "check": "output contains 一、 and 二、 and 三、 and 四、 and 五、"
+    },
+    {
+      "id": "project_name",
+      "description": "正确识别项目名称为 AID web",
+      "check": "output contains AID web or AID Web"
+    },
+    {
+      "id": "ai_insight_codex",
+      "description": "AI心得部分包含 Codex 截图快捷键内容",
+      "check": "output contains Codex and (截图 or 快捷键 or screenshot)"
+    },
+    {
+      "id": "next_week_subscription",
+      "description": "下周计划包含订阅功能",
+      "check": "output contains 订阅"
+    },
+    {
+      "id": "tasks_accurate",
+      "description": "任务条目准确包含登录迁移、Google/Apple对接、SEO修复",
+      "check": "output contains (登录 or 登陆) and (Google or Apple) and SEO"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "eval_id": 0,
+  "eval_name": "git-only-no-context",
+  "prompt": "帮我写周报",
+  "assertions": [
+    {
+      "id": "five_sections",
+      "description": "输出包含5个章节（一至五）",
+      "check": "output contains 一、 and 二、 and 三、 and 四、 and 五、"
+    },
+    {
+      "id": "no_fabrication",
+      "description": "不确定内容标注[待确认]而非编造，不虚构具体任务",
+      "check": "output contains [待确认] for at least one unknown field"
+    },
+    {
+      "id": "chinese_output",
+      "description": "全文使用中文",
+      "check": "output is primarily in Chinese"
+    },
+    {
+      "id": "correct_format",
+      "description": "遵循模板格式（项目、需求、上线计划结构）",
+      "check": "output contains 项目：and 需求："
+    }
+  ]
+}

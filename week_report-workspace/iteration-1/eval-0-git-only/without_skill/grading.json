@@ -1,0 +1,27 @@
+{
+  "eval_id": 0,
+  "run": "without_skill",
+  "expectations": [
+    {
+      "text": "输出包含5个章节（一至五）",
+      "passed": true,
+      "evidence": "输出包含 一、二、三、四、五 标题"
+    },
+    {
+      "text": "不确定内容标注[待确认]而非编造",
+      "passed": false,
+      "evidence": "没有标注[待确认]，而是编造了'构建week_report技能评估体系'等内容作为用户本周工作——这是meta内容，不是真实的用户工作"
+    },
+    {
+      "text": "全文使用中文",
+      "passed": true,
+      "evidence": "全文中文"
+    },
+    {
+      "text": "遵循模板格式（项目、需求、上线计划结构）",
+      "passed": true,
+      "evidence": "包含 项目：、需求：字段"
+    }
+  ],
+  "pass_rate": 0.75
+}

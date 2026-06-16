@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "skill_name": "week_report",
+    "skill_path": "/Users/liuhui/.claude/skills/week_report",
+    "executor_model": "claude-sonnet-4-6",
+    "analyzer_model": "claude-sonnet-4-6",
+    "timestamp": "2026-06-16T08:45:00Z",
+    "evals_run": ["git-only-no-context", "user-provided-context"],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "eval_name": "git-only-no-context",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 35.3,
+        "tokens": 15661,
+        "tool_calls": 3,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "输出包含5个章节（一至五）", "passed": true, "evidence": "包含一至五完整章节"},
+        {"text": "AI心得部分有实际内容（非[待确认]）", "passed": true, "evidence": "包含2条具体技巧，无[待确认]"},
+        {"text": "AI心得推荐了2条技巧", "passed": true, "evidence": "迁移检查清单 + CLAUDE.md规则技巧"},
+        {"text": "遵循模板格式（项目、需求结构）", "passed": true, "evidence": "包含项目：和需求：字段"}
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "user-provided-context",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 35.8,
+        "tokens": 15191,
+        "tool_calls": 3,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "输出包含5个章节（一至五）", "passed": true, "evidence": "包含一至五完整章节"},
+        {"text": "正确识别项目名称为 AID web", "passed": true, "evidence": "AID Web正确出现"},
+        {"text": "AI心得包含用户提到的Codex技巧并额外补充1条", "passed": true, "evidence": "Codex截图快捷键+迁移检查清单"},
+        {"text": "下周计划包含订阅功能", "passed": true, "evidence": "包含AID Web订阅功能开发"},
+        {"text": "任务条目准确包含登录迁移、Google/Apple对接、SEO修复", "passed": true, "evidence": "三条任务条目全部准确"}
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 35.6, "stddev": 0.25, "min": 35.3, "max": 35.8},
+      "tokens": {"mean": 15426, "stddev": 235, "min": 15191, "max": 15661}
+    },
+    "delta": {
+      "pass_rate": "N/A (iteration-2 only ran with_skill)",
+      "time_seconds": "-21.0 vs iteration-1 with_skill",
+      "tokens": "-6576 vs iteration-1 with_skill"
+    }
+  },
+  "notes": [
+    "Iteration-2 改进：AI心得不再留白，主动推荐2条相关技巧",
+    "交互式收集工作内容的流程让eval-0场景更真实，用户无需自己想格式",
+    "Token用量比iteration-1大幅下降（15k vs 22k），因为不再自动读取git历史",
+    "两个用例均100%通过，主要改进体现在AI心得章节的内容完整性"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "eval_id": 0,
+  "run": "with_skill",
+  "expectations": [
+    {
+      "text": "输出包含5个章节（一至五）",
+      "passed": true,
+      "evidence": "输出中包含 一、二、三、四、五 标题"
+    },
+    {
+      "text": "不确定内容标注[待确认]而非编造",
+      "passed": true,
+      "evidence": "AID web/DecAgent 信息、AI心得、下周计划均标注了[待确认]"
+    },
+    {
+      "text": "全文使用中文",
+      "passed": true,
+      "evidence": "全文中文，技术术语适当保留英文"
+    },
+    {
+      "text": "遵循模板格式（项目、需求、上线计划结构）",
+      "passed": true,
+      "evidence": "包含 项目：、需求：、上线计划：等字段"
+    }
+  ],
+  "pass_rate": 1.0
+}
