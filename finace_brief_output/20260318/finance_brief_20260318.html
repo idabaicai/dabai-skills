@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: -apple-system, "PingFang SC", "Hiragino Sans GB",
+                 "Microsoft YaHei", "Source Han Serif SC", serif;
+    font-size: 10.5pt;
+    line-height: 1.85;
+    color: #1c1c1c;
+    background: #fafaf8;
+}
+
+/* 第一页（封面）无边距，全出血 */
+@page :first { margin: 0; }
+/* 后续所有正文页：顶部 48px，左右 40px */
+@page { margin: 48px 40px; }
+
+/* 封面：撑满整页 */
+.cover {
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 80px;
+    background: #1a3a5c;
+    color: white;
+    text-align: center;
+}
+.cover .bar { width: 60px; height: 5px; background: #c8a84b; margin: 0 auto 40px; }
+.cover h1 {
+    font-size: 28pt;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin: 0 0 12px;
+}
+.cover .subtitle {
+    font-size: 12pt;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 48px;
+}
+.cover .meta { font-size: 10pt; color: rgba(255,255,255,0.65); line-height: 2.2; }
+.cover .meta strong { color: #c8a84b; }
+
+/* 正文容器 */
+.content {
+    padding: 16px;
+}
+
+h1 { display: none; }
+
+h2 {
+    font-size: 13pt;
+    font-weight: 700;
+    color: #1a3a5c;
+    border-left: 4px solid #c8a84b;
+    padding-left: 12px;
+    margin: 30px 0 10px;
+    break-after: avoid;
+    break-inside: avoid;
+}
+
+h3 {
+    font-size: 11pt;
+    font-weight: 600;
+    color: #1a3a5c;
+    margin: 18px 0 6px;
+    break-after: avoid;
+    break-inside: avoid;
+}
+
+p {
+    margin-bottom: 9px;
+    text-align: justify;
+    orphans: 3;
+    widows: 3;
+}
+
+em { color: #5a5a5a; font-style: normal; font-size: 9pt; }
+
+strong { color: #1a3a5c; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 14px;
+    font-size: 9.5pt;
+    break-inside: avoid;
+}
+th { background: #1a3a5c; color: white; padding: 7px 10px; text-align: left; }
+td { padding: 5px 10px; border-bottom: 1px solid #d4d4d4; }
+tr:nth-child(even) td { background: #f3f3ef; }
+
+hr {
+    border: none;
+    border-top: 1px solid #d4d4d4;
+    margin: 20px 0;
+    break-after: avoid;
+}
+
+ul, ol { margin: 6px 0 10px 20px; }
+li { margin-bottom: 3px; }
+
+blockquote {
+    border-left: 3px solid #c8a84b;
+    padding: 6px 14px;
+    color: #5a5a5a;
+    font-size: 9.5pt;
+    background: #f6f4ee;
+    margin: 10px 0;
+    break-inside: avoid;
+}
+
+.content > *:first-child { margin-top: 0; }
+</style>
+</head>
+<body>
+
+<!-- 封面 -->
+<div class="cover">
+    <div class="bar"></div>
+    <h1>全球财经简报</h1>
+    <div class="subtitle">GLOBAL FINANCIAL BRIEF</div>
+    <div class="meta">
+        <strong>报告日期</strong>&nbsp;&nbsp;2026年03月18日<br>
+        覆盖时段：过去 24 小时<br>
+        来源：Bloomberg &middot; Reuters &middot; CNBC &middot; 新浪财经 &middot; 东方财富
+    </div>
+</div>
+
+<!-- 正文（由脚本替换 <h1>全球财经简报</h1>
+<p><strong>报告日期</strong>：2026年03月18日<br />
+<strong>覆盖时段</strong>：过去 24 小时<br />
+<strong>数据来源</strong>：Bloomberg、Reuters、Trading Economics、财新等主流财经媒体</p>
+<hr />
+<h2>执行摘要</h2>
+<p>今日全球市场焦点集中在美联储即将公布的利率决议，市场普遍预期将维持利率不变。与此同时，中东地区（特别是美伊冲突）的局势持续牵动大宗商品市场，原油价格在高位剧烈波动。亚洲市场表现分化，港股在强劲经济数据支撑下实现“三连阳”，而A股则在4000点上方维持震荡整固，避险情绪依然占据主导。</p>
+<hr />
+<h2>一、全球宏观 &amp; 央行动态</h2>
+<h3>1.1 美联储议息会议与货币政策</h3>
+<p>美联储定于今日公布利率决议，市场预期（CME FedWatch 显示概率达 99%）将维持联邦基金利率在 3.50% 至 3.75% 之间不变。这是自美伊战争爆发以来的首次议息会议，地缘政治风险引入了巨大不确定性。尽管 2 月 CPI 稳定在 2.4%，但能源驱动的通胀预期可能促使美联储上调 2026 年通胀预测，此前市场预期的 6 月降息节点已显著推后，目前多数分析师预计今年仅有一次降息甚至不降息。<br />
+<em>来源：<a href="https://www.reuters.com/">Fed expected to hold rates amid geopolitical shock — Reuters</a> · <a href="https://www.bloomberg.com/">FOMC Meeting Preview: Inflation and War in Focus — Bloomberg</a></em></p>
+<h3>1.2 汇率市场：人民币表现坚挺</h3>
+<p>2026年3月18日，人民币对美元汇率中间价报 6.8909，较前一交易日上调 52 个基点。在全球主要货币如日元、韩元受地缘政治打击出现较大幅度贬值的背景下，人民币表现出较强的避险属性和抗风险能力。市场正密切关注中美经贸对话的进展，目前双方在关税和技术合作方面已达成部分共识。<br />
+<em>来源：<a href="http://www.news.cn/">RMB midpoint strengthens to 6.8909 — Xinhua News</a> · <a href="https://tradingeconomics.com/">Currency market stability amidst regional conflict — Trading Economics</a></em></p>
+<h3>1.3 大宗商品：原油高位震荡，黄金高点回调</h3>
+<p>受霍尔木兹海峡供应中断风险影响，布伦特原油在 102-103 美元/桶附近剧烈波动。尽管美国原油库存意外增加 656 万桶带来短暂调整，但地缘政治溢价依然支撑油价。黄金价格从此前历史高点小幅回调至 5,004 美元/盎司附近，主要受美元走强和国债收益率上升的挤压。铜价因 AI 基础设施建设带动的结构性短缺，维持在 5.77 美元/磅的高位。<br />
+<em>来源：<a href="https://www.bloomberg.com/">Oil prices volatile on Middle East supply fears — Bloomberg</a> · <a href="https://www.poundsterlinglive.com/">Gold prices correct from record highs — Pound Sterling Live</a></em></p>
+<hr />
+<h2>二、美股市场</h2>
+<h3>2.1 指数小幅反弹，等待联储指引</h3>
+<p>美股周二（3月17日）小幅收涨，标普 500 指数上涨 0.25% 报 6,716.09 点，纳斯达克上涨 0.47%。市场正在消化 AI 估值担忧与战争风险，今日早盘期货维持平盘。标普 500 指数目前较一年前仍有 18% 的涨幅，但过去一个月受地缘政治影响下跌约 2%。<br />
+<em>来源：<a href="https://tradingeconomics.com/">US stocks rebound ahead of Fed decision — Trading Economics</a> · <a href="https://economictimes.indiatimes.com/">Market volatility eases as earnings support sectors — Economic Times</a></em></p>
+<h3>2.2 行业表现：航空与能源领涨</h3>
+<p>尽管燃油成本上升，但达美航空（+6.5%）和美国航空（+3.5%）上调营收预期，带动旅游板块大涨。能源板块紧随油价上涨趋势。科技股方面，Western Digital 创下历史新高（+9.6%），而 Nvidia 微跌 0.7%。Uber 因即将推出自动驾驶出租车业务而上涨 4.2%。<br />
+<em>来源：<a href="https://www.latimes.com/">Airlines soar on strong travel demand — LA Times</a> · <a href="https://www.bloomberg.com/">Tech sector mixed amid AI revenue outlooks — Bloomberg</a></em></p>
+<hr />
+<h2>三、港股市场</h2>
+<h3>3.1 恒生指数实现“三连阳”</h3>
+<p>香港恒生指数今日收报 25,923.03 点，开盘上涨 0.2%，实现了自 1 月底以来最长的连涨纪录。支撑动力主要来自强劲的国内经济数据（中国 1-2 月工业产出与零售额超预期）以及空头回补。科技股表现活跃，中芯国际与美团均上涨 0.7%，但腾讯受今日即将发布的财报观望情绪影响，早盘小幅走弱。<br />
+<em>来源：<a href="https://www.scmp.com/">Hang Seng extends winning streak — SCMP</a> · <a href="https://tradingeconomics.com/">China economic data beats estimates, supporting H-shares — Trading Economics</a></em></p>
+<hr />
+<h2>四、A 股市场</h2>
+<h3>4.1 4000点关口震荡整固</h3>
+<p>今日 A 股市场表现相对平淡，上证综指在昨日收跌 0.85% 至 4,049 点后，今日维持窄幅震荡。避险情绪导致资金从高波动的能源板块流出，而金融与保险板块在回调中展现韧性。政府近期发行的超长期国债和财政扩张策略正在逐步发挥效力，提振了长期基本面预期，但短期内市场仍在消化地缘政治波动。<br />
+<em>来源：<a href="https://www.caixinglobal.com/">A-shares steady near 4000-level support — Caixin Global</a> · <a href="https://www.indopremier.com/">Market cautious on geopolitical uncertainties — IndoPremier</a></em></p>
+<hr />
+<h2>风险提示</h2>
+<p>本简报内容仅供参考，不构成投资建议。市场有风险，投资需谨慎。</p> 占位符） -->
+<div class="content">
+<h1>全球财经简报</h1>
+<p><strong>报告日期</strong>：2026年03月18日<br />
+<strong>覆盖时段</strong>：过去 24 小时<br />
+<strong>数据来源</strong>：Bloomberg、Reuters、Trading Economics、财新等主流财经媒体</p>
+<hr />
+<h2>执行摘要</h2>
+<p>今日全球市场焦点集中在美联储即将公布的利率决议，市场普遍预期将维持利率不变。与此同时，中东地区（特别是美伊冲突）的局势持续牵动大宗商品市场，原油价格在高位剧烈波动。亚洲市场表现分化，港股在强劲经济数据支撑下实现“三连阳”，而A股则在4000点上方维持震荡整固，避险情绪依然占据主导。</p>
+<hr />
+<h2>一、全球宏观 &amp; 央行动态</h2>
+<h3>1.1 美联储议息会议与货币政策</h3>
+<p>美联储定于今日公布利率决议，市场预期（CME FedWatch 显示概率达 99%）将维持联邦基金利率在 3.50% 至 3.75% 之间不变。这是自美伊战争爆发以来的首次议息会议，地缘政治风险引入了巨大不确定性。尽管 2 月 CPI 稳定在 2.4%，但能源驱动的通胀预期可能促使美联储上调 2026 年通胀预测，此前市场预期的 6 月降息节点已显著推后，目前多数分析师预计今年仅有一次降息甚至不降息。<br />
+<em>来源：<a href="https://www.reuters.com/">Fed expected to hold rates amid geopolitical shock — Reuters</a> · <a href="https://www.bloomberg.com/">FOMC Meeting Preview: Inflation and War in Focus — Bloomberg</a></em></p>
+<h3>1.2 汇率市场：人民币表现坚挺</h3>
+<p>2026年3月18日，人民币对美元汇率中间价报 6.8909，较前一交易日上调 52 个基点。在全球主要货币如日元、韩元受地缘政治打击出现较大幅度贬值的背景下，人民币表现出较强的避险属性和抗风险能力。市场正密切关注中美经贸对话的进展，目前双方在关税和技术合作方面已达成部分共识。<br />
+<em>来源：<a href="http://www.news.cn/">RMB midpoint strengthens to 6.8909 — Xinhua News</a> · <a href="https://tradingeconomics.com/">Currency market stability amidst regional conflict — Trading Economics</a></em></p>
+<h3>1.3 大宗商品：原油高位震荡，黄金高点回调</h3>
+<p>受霍尔木兹海峡供应中断风险影响，布伦特原油在 102-103 美元/桶附近剧烈波动。尽管美国原油库存意外增加 656 万桶带来短暂调整，但地缘政治溢价依然支撑油价。黄金价格从此前历史高点小幅回调至 5,004 美元/盎司附近，主要受美元走强和国债收益率上升的挤压。铜价因 AI 基础设施建设带动的结构性短缺，维持在 5.77 美元/磅的高位。<br />
+<em>来源：<a href="https://www.bloomberg.com/">Oil prices volatile on Middle East supply fears — Bloomberg</a> · <a href="https://www.poundsterlinglive.com/">Gold prices correct from record highs — Pound Sterling Live</a></em></p>
+<hr />
+<h2>二、美股市场</h2>
+<h3>2.1 指数小幅反弹，等待联储指引</h3>
+<p>美股周二（3月17日）小幅收涨，标普 500 指数上涨 0.25% 报 6,716.09 点，纳斯达克上涨 0.47%。市场正在消化 AI 估值担忧与战争风险，今日早盘期货维持平盘。标普 500 指数目前较一年前仍有 18% 的涨幅，但过去一个月受地缘政治影响下跌约 2%。<br />
+<em>来源：<a href="https://tradingeconomics.com/">US stocks rebound ahead of Fed decision — Trading Economics</a> · <a href="https://economictimes.indiatimes.com/">Market volatility eases as earnings support sectors — Economic Times</a></em></p>
+<h3>2.2 行业表现：航空与能源领涨</h3>
+<p>尽管燃油成本上升，但达美航空（+6.5%）和美国航空（+3.5%）上调营收预期，带动旅游板块大涨。能源板块紧随油价上涨趋势。科技股方面，Western Digital 创下历史新高（+9.6%），而 Nvidia 微跌 0.7%。Uber 因即将推出自动驾驶出租车业务而上涨 4.2%。<br />
+<em>来源：<a href="https://www.latimes.com/">Airlines soar on strong travel demand — LA Times</a> · <a href="https://www.bloomberg.com/">Tech sector mixed amid AI revenue outlooks — Bloomberg</a></em></p>
+<hr />
+<h2>三、港股市场</h2>
+<h3>3.1 恒生指数实现“三连阳”</h3>
+<p>香港恒生指数今日收报 25,923.03 点，开盘上涨 0.2%，实现了自 1 月底以来最长的连涨纪录。支撑动力主要来自强劲的国内经济数据（中国 1-2 月工业产出与零售额超预期）以及空头回补。科技股表现活跃，中芯国际与美团均上涨 0.7%，但腾讯受今日即将发布的财报观望情绪影响，早盘小幅走弱。<br />
+<em>来源：<a href="https://www.scmp.com/">Hang Seng extends winning streak — SCMP</a> · <a href="https://tradingeconomics.com/">China economic data beats estimates, supporting H-shares — Trading Economics</a></em></p>
+<hr />
+<h2>四、A 股市场</h2>
+<h3>4.1 4000点关口震荡整固</h3>
+<p>今日 A 股市场表现相对平淡，上证综指在昨日收跌 0.85% 至 4,049 点后，今日维持窄幅震荡。避险情绪导致资金从高波动的能源板块流出，而金融与保险板块在回调中展现韧性。政府近期发行的超长期国债和财政扩张策略正在逐步发挥效力，提振了长期基本面预期，但短期内市场仍在消化地缘政治波动。<br />
+<em>来源：<a href="https://www.caixinglobal.com/">A-shares steady near 4000-level support — Caixin Global</a> · <a href="https://www.indopremier.com/">Market cautious on geopolitical uncertainties — IndoPremier</a></em></p>
+<hr />
+<h2>风险提示</h2>
+<p>本简报内容仅供参考，不构成投资建议。市场有风险，投资需谨慎。</p>
+</div>
+
+</body>
+</html>

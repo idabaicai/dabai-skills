@@ -1,0 +1,104 @@
+# 全球财经简报
+**报告日期**：2026年03月19日
+**覆盖时段**：2026年03月18日 09:30 CST 至 2026年03月19日 09:30 CST
+**数据来源**：AP、Axios、Reuters、Barron's、The Wall Street Journal、Financial Times、Business Insider 等
+
+---
+
+## 执行摘要
+
+3月18日至3月19日的全球市场主线集中在三点。第一，美联储在2026年3月18日议息会议上维持利率不变，同时上调通胀预期、下调增长预期，强化了“降息节奏更慢”的定价。第二，中东局势升温推动油价单日大涨，WTI与布伦特原油分别升至107.42美元和110.60美元附近，通胀再定价压力反过来压制股市风险偏好。第三，美股在议息前后连续承压，部分全球资金开始转向中国和欧洲资产；但就港股与A股而言，近24小时内可检索到的权威、同日盘后综述仍然不足，因此本简报仅保留已验证的增量信息，不扩写无法核实的盘面细节。
+
+---
+
+## 一、全球宏观 & 央行动态
+
+### 1.1 美联储维持利率不变，2026年通胀预期上修至2.7%
+
+美联储在2026年3月18日结束的议息会议上维持联邦基金利率不变。公开报道显示，联储同时把2026年通胀预期上调至2.7%，并把经济增速预期下调至1.4%，点阵图仅指向年内一次降息。对市场而言，这意味着“高利率维持更久”的基线并未松动，债券、美元和权益资产都需要重新定价增长放缓与通胀黏性的组合风险。
+
+*来源：[Fed holds steady amid uncertain outlook — Axios](https://www.axios.com/2026/03/18/fed-interest-rate-decision-march-2026) · [Federal Reserve keeps its key rate unchanged and signals just one cut for 2026 — AP](https://apnews.com/article/federal-reserve-inflation-interest-rates-tariffs-b87c8a7d37964e6aa58fe6402f07e7d3) · [Federal Reserve Chair Powell says one official thought possible rate hike was warranted — MarketWatch](https://www.marketwatch.com/livecoverage/fed-meeting-interest-rates-today-mar-2026/card/federal-reserve-chair-powell-says-one-official-thought-possible-rate-hike-was-warranted-iRkQjUaYt8CLfWKw35P6)*
+
+### 1.2 美元维持强势，人民币定价短线受更强中间价支撑
+
+Reuters 在过去13小时内的报道显示，美元仍徘徊在近一个月高位附近，反映出在美联储不急于转向、全球避险需求抬升的背景下，美元资产仍具相对吸引力。报道同时提到，人民币虽然面临中国利率较低带来的压力，但受更强中间价支撑而阶段性企稳。对亚洲资产来说，这意味着汇率端暂时没有形成新的系统性利空，但也尚未出现足以驱动全面风险偏好回升的美元拐点。
+
+*来源：[US-China trade truce keeps dollar resilient, cyclical currencies outperform — Reuters / Yahoo Finance](https://finance.yahoo.com/news/us-china-trade-truce-keeps-050226928.html)*
+
+### 1.3 中东风险推动油价跳升，黄金维持高位震荡
+
+中东地缘风险是过去24小时最直接的再通胀变量。AP 报道显示，美国原油上涨4.16美元至107.42美元，布伦特原油上涨4.19美元至110.60美元，市场开始计入更长期、更广泛冲突对能源供应的扰动。黄金方面，Barron's 报道称，贵金属在美联储议息与油价上冲的双重影响下维持强势震荡，反映出市场仍在同时对冲地缘政治风险和政策不确定性。
+
+*来源：[Oil prices rally further, gasoline prices could increase amid worries about a wider Mideast war — AP](https://apnews.com/article/oil-prices-gasoline-israel-iran-middle-east-war-9fc4a3b5f8d1142810c1ccadf59cb818) · [Oil Prices Jump on Growing Fears of a Prolonged Middle East War — The Wall Street Journal](https://www.wsj.com/finance/commodities-futures/oil-prices-jump-6d38cf24) · [Gold Climbs Ahead of Fed Rate Decision and Oil Surge, but Is Set for Weekly Loss — Barron's](https://www.barrons.com/articles/gold-prices-fed-oil-dollar-d965394c)*
+
+---
+
+## 二、美股市场
+
+### 2.1 议息前夕风险偏好回落，标普500单日下跌0.4%
+
+在美联储决议公布前，油价快速上行与利率不确定性已经对美股构成压制。AP 报道显示，标普500在议息前一交易日下跌0.4%，大型科技股是主要拖累项，说明市场在等待政策信号期间已开始降低高估值成长股仓位。能源价格重新上行也让投资者担忧美国通胀降温路径受阻，从而压缩权益资产估值空间。
+
+*来源：[Worry about stock market and oil prices jostles Wall Street day before Fed speaks — AP](https://apnews.com/article/stock-markets-rates-fed-oil-eb1ee7b4e60f47d3af2e873ee9216994)*
+
+### 2.2 美联储偏鹰与油价飙升叠加，盘中道指一度重挫770点
+
+Barron's 盘中报道显示，在美联储释放“更久维持高利率”信号、同时油价继续飙升之后，道琼斯工业指数一度下跌770点。市场的核心担忧不是单一的利率不变，而是增长放缓、通胀抬头与能源成本抬升共同压缩企业盈利预期。该组合意味着短期内防御板块和现金流确定性更高的资产可能继续相对占优。
+
+*来源：[Dow Tumbles 770 Points After Fed Signal, Oil Spike — Barron's](https://www.barrons.com/livecoverage/stock-market-news-today-03192026/card/dow-tumbles-770-points-after-fed-signal-oil-spike-leYJ4W4VThWvDUuQJVsk) · [Fed holds steady amid uncertain outlook — Axios](https://www.axios.com/2026/03/18/fed-interest-rate-decision-march-2026)*
+
+### 2.3 期货盘谨慎修复，但科技龙头仍受高利率预期约束
+
+Investors.com 的盘前报道显示，在10年期美债收益率有所回落后，美股股指期货一度小幅回升，但油价继续上涨，Apple、Tesla 等高贝塔龙头仍处于交易焦点。这表明短线市场并非完全转向避险，而是在寻找“收益率见顶”和“能源通胀再起”之间的平衡点；只要美联储与油价两条线索没有明显缓和，美股修复更可能呈现结构性而非全面性反弹。
+
+*来源：[Dow Jones Futures: Fed Meeting In Focus; Apple, Tesla In Spotlight — Investors.com](https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-fed-meeting-apple-tesla-stock-market-2/) · [Oil prices rally further, gasoline prices could increase amid worries about a wider Mideast war — AP](https://apnews.com/article/oil-prices-gasoline-israel-iran-middle-east-war-9fc4a3b5f8d1142810c1ccadf59cb818)*
+
+---
+
+## 三、港股市场
+
+### 3.1 全球资金开始重新评估中国与欧洲资产，港股科技板块受益于相对估值
+
+Business Insider 在过去16小时内的报道指出，在标普500自2月高点回撤约10%后，部分交易员开始对欧洲和中国市场转为乐观，理由包括 AI 主题外溢、估值更具吸引力以及美国资产拥挤交易的回吐。对港股而言，最直接的映射是互联网与科技龙头的相对吸引力回升，但资金回流仍偏主题化和选择性，尚未体现为全面风险偏好修复。
+
+*来源：[Stock traders are turning bullish on Europe and China as they go bearish on America after AI sell-off — Business Insider](https://www.businessinsider.com/china-europe-stock-markets-traders-bearish-america-ai-rout-sp500-2026-3)*
+
+### 3.2 香港内幕交易调查扩大，市场更关注融资与配售环节合规风险
+
+Financial Times 报道称，香港内幕交易调查范围已扩大至一家精品券商，监管机构指控经纪业务人员向亲友泄露即将发生的配售信息。对港股市场而言，这类调查不会立刻改变指数方向，但会提高投资者对小盘股配售、二级募资与经纪业务合规性的敏感度，短期内可能压制部分流动性较弱标的的风险偏好。
+
+*来源：[Hong Kong insider trading inquiry expands to include boutique broker — Financial Times](https://www.ft.com/content/9a056eeb-0f9c-4df4-b7c1-7d2c91554aca)*
+
+### 3.3 近24小时未检索到足够的权威港股盘后综述，暂不扩写指数层面结论
+
+截至2026年3月19日 09:30 CST，可直接检索并核验的港股同日权威综述仍然不足，尤其缺少同时满足“过去24小时内发布”“包含明确盘后数据”“来源权威可追溯”三项条件的市场总览。因此本板块仅保留对资金流向和监管动态的增量信息，不对恒生指数、恒生科技指数的具体点位和涨跌幅作未经核实的补写。
+
+*来源：[Stock traders are turning bullish on Europe and China as they go bearish on America after AI sell-off — Business Insider](https://www.businessinsider.com/china-europe-stock-markets-traders-bearish-america-ai-rout-sp500-2026-3) · [Hong Kong insider trading inquiry expands to include boutique broker — Financial Times](https://www.ft.com/content/9a056eeb-0f9c-4df4-b7c1-7d2c91554aca)*
+
+---
+
+## 四、A 股市场
+
+### 4.1 外部资金风险偏好边际回流，中国资产重新进入全球配置视野
+
+从全球跨市场资金流向看，过去24小时最明确的增量之一，是海外交易员对中国资产态度的边际改善。Business Insider 报道显示，在美股高位回撤和 AI 交易重估后，部分资金开始同时看多欧洲与中国市场。对 A 股而言，这一变化更像估值和主题驱动下的配置修正，而非由单一政策刺激触发的全面行情；若后续人民币和国内利率预期稳定，外资偏好改善可能继续向大盘成长和科技链条扩散。
+
+*来源：[Stock traders are turning bullish on Europe and China as they go bearish on America after AI sell-off — Business Insider](https://www.businessinsider.com/china-europe-stock-markets-traders-bearish-america-ai-rout-sp500-2026-3)*
+
+### 4.2 人民币阶段性企稳，有助于压低A股外资交易的汇率扰动
+
+Reuters 报道指出，美元仍处于近一个月高位附近，但人民币受更强中间价支撑而阶段性企稳。对 A 股外资交易而言，这意味着短线汇率扰动没有继续明显恶化，有助于缓和北向资金对汇率损失的顾虑。不过在美联储维持偏鹰、美元尚未出现明确回落之前，人民币对国内风险资产的支撑仍更偏“止跌”而非“趋势性推升”。
+
+*来源：[US-China trade truce keeps dollar resilient, cyclical currencies outperform — Reuters / Yahoo Finance](https://finance.yahoo.com/news/us-china-trade-truce-keeps-050226928.html)*
+
+### 4.3 A股同日盘后权威综述不足，暂以跨市场增量信息为主
+
+近24小时内，公开可检索结果中缺少足够完整且权威的 A 股盘后总览，尤其难以同时满足发布时间、来源级别与数据完整性要求。基于时效和准确性优先原则，本板块不补写未经核实的上证综指、深成指、创业板指收盘表现，仅保留已验证的全球资金偏好与汇率环境变化，避免用旧报道替代当日增量信息。
+
+*来源：[Stock traders are turning bullish on Europe and China as they go bearish on America after AI sell-off — Business Insider](https://www.businessinsider.com/china-europe-stock-markets-traders-bearish-america-ai-rout-sp500-2026-3) · [US-China trade truce keeps dollar resilient, cyclical currencies outperform — Reuters / Yahoo Finance](https://finance.yahoo.com/news/us-china-trade-truce-keeps-050226928.html)*
+
+---
+
+## 风险提示
+
+本简报内容仅供参考，不构成投资建议。市场有风险，投资需谨慎。

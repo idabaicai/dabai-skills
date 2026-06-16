@@ -13,6 +13,7 @@ import argparse
 import subprocess
 import sys
 import shutil
+import tempfile
 from datetime import datetime
 from pathlib import Path
 
@@ -242,6 +243,56 @@ def html_to_pdf_chrome(html_path: Path, pdf_path: Path, chrome: str):
         http_server.shutdown()
 
 
+def html_to_pdf_chrome_direct(html_path: Path, pdf_path: Path, chrome: str):
+    """
+    回退方案：直接调用 Chrome 的 print-to-pdf。
+    显式关闭页眉页脚，避免每页出现文件路径和页码。
+    """
+    file_url = html_path.resolve().as_uri()
+    user_data_dir = Path(tempfile.mkdtemp(prefix="finance-brief-chrome-"))
+
+    # 新旧 Chrome 对关闭页眉页脚的参数兼容性不同，依次尝试。
+    flag_sets = [
+        ["--no-pdf-header-footer"],
+        ["--print-to-pdf-no-header"],
+    ]
+
+    try:
+        last_error = None
+        for extra_flags in flag_sets:
+            cmd = [
+                chrome,
+                "--headless=new",
+                "--disable-gpu",
+                "--no-sandbox",
+                f"--user-data-dir={user_data_dir}",
+                f"--print-to-pdf={pdf_path}",
+                *extra_flags,
+                file_url,
+            ]
+            try:
+                subprocess.run(
+                    cmd,
+                    check=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    text=True,
+                )
+            except subprocess.CalledProcessError as exc:
+                last_error = exc
+                continue
+
+            if pdf_path.exists() and pdf_path.stat().st_size > 0:
+                return
+
+        if last_error:
+            stderr = (last_error.stderr or "").strip()
+            raise RuntimeError(stderr or "Chrome print-to-pdf 执行失败")
+        raise RuntimeError("Chrome print-to-pdf 未生成 PDF")
+    finally:
+        shutil.rmtree(user_data_dir, ignore_errors=True)
+
+
 def main():
     parser = argparse.ArgumentParser(description="财经简报 Markdown → PDF 转换工具")
     parser.add_argument("--input",  "-i", required=True, help="输入 Markdown 文件路径")
@@ -280,7 +331,14 @@ def main():
             print(f"\n PDF 已生成: {output_path} ({size_kb} KB)")
             return
         except Exception as e:
-            print(f"Chrome 转换失败: {e}，尝试其他方案...")
+            print(f"Chrome 转换失败: {e}，尝试无页眉页脚回退方案...")
+            try:
+                html_to_pdf_chrome_direct(tmp_html, output_path, chrome)
+                size_kb = output_path.stat().st_size // 1024
+                print(f"\n PDF 已生成: {output_path} ({size_kb} KB)")
+                return
+            except Exception as fallback_error:
+                print(f"回退方案也失败: {fallback_error}")
 
     # 回退：提示用户手动转换
     print("\n未找到 Chrome，请手动将 HTML 转为 PDF：")
