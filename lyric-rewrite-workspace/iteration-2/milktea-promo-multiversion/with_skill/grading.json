@@ -1,0 +1,8 @@
+{"expectations":[
+ {"text":"给出2个不同版本","passed":true,"evidence":"甜宠可爱版+魔性叫卖版"},
+ {"text":"每个版本逐句字数与原词对齐","passed":true,"evidence":"check_syllables.py 实跑 v1/v2 均 10/8/12/11 全✓"},
+ {"text":"奶茶店开业宣传主题","passed":true,"evidence":"小奶茶/珍珠/开业免费/全城最火"},
+ {"text":"两版风格不同且各有定位","passed":true,"evidence":"店内循环/短视频 vs 大喇叭/地推喊麦"},
+ {"text":"有重复洗脑记忆点","passed":true,"evidence":"两版均保留'火火火火'，且开业=生意火一语双关"},
+ {"text":"用词自然通顺、不凑字","passed":true,"evidence":"无掰词/废字/英文；子任务自检抓到V2第3句11字并改回12字"}
+]}

@@ -1,0 +1,7 @@
+{"expectations":[
+ {"text":"改编词句数与原词一致（4句）","passed":true,"evidence":"4 句"},
+ {"text":"每句字数与原词逐句对齐","passed":true,"evidence":"check_syllables.py 实跑：13/9/10/10 全部 ✓（此用例基线也对齐）"},
+ {"text":"主题贯穿团队/年会/一起拼搏","passed":true,"evidence":"并肩奋战/难关都跨过/向前冲"},
+ {"text":"句尾押韵、读起来顺口","passed":true,"evidence":"手/过/过/冲，大体顺口"},
+ {"text":"干净成品带结构标注","passed":true,"evidence":"标题标注'·副歌'，无独立[副歌]段标签但段落清晰"}
+]}

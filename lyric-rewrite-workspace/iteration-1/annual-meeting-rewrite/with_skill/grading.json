@@ -1,0 +1,7 @@
+{"expectations":[
+ {"text":"改编词句数与原词一致（4句）","passed":true,"evidence":"4 句副歌，与原词一一对应"},
+ {"text":"每句字数与原词逐句对齐","passed":true,"evidence":"check_syllables.py 实跑：13/9/10/10 全部 ✓"},
+ {"text":"主题贯穿团队/年会/一起拼搏","passed":true,"evidence":"并肩扛过坎坷/熬过寒冬/还有你共我，主题贯穿"},
+ {"text":"句尾押韵、读起来顺口","passed":true,"evidence":"过/缩押 -uo，结尾'我'沿用原词收尾音"},
+ {"text":"干净成品带结构标注","passed":true,"evidence":"带[副歌]标注，标题注明原曲"}
+]}

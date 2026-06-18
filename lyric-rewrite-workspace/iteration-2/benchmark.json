@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "skill_name": "lyric-rewrite",
+    "skill_path": "/Users/liuhui/AI/dabai-skills/lyric-rewrite",
+    "executor_model": "claude (general-purpose subagent)",
+    "analyzer_model": "claude-opus-4-8",
+    "timestamp": "2026-06-18T10:05:00Z",
+    "evals_run": [0, 1, 2],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "eval_name": "annual-meeting-rewrite",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 1.0, "passed": 7, "failed": 0, "total": 7, "time_seconds": 84.2, "tokens": 20060, "tool_calls": 9, "errors": 0},
+      "expectations": [
+        {"text": "改编词句数与原词一致（4句）", "passed": true, "evidence": "4句"},
+        {"text": "每句字数与原词逐句对齐", "passed": true, "evidence": "check_syllables.py 实跑 13/9/10/10 全✓"},
+        {"text": "主题贯穿团队/年会/一起拼搏", "passed": true, "evidence": "熬过几个春秋/拼到今天/新一年"},
+        {"text": "句尾押韵、读起来顺口", "passed": true, "evidence": "秋/了/起/我对位原词韵脚"},
+        {"text": "干净成品带结构标注", "passed": true, "evidence": "带[副歌]，标题注明原曲"},
+        {"text": "用词自然通顺、不凑字", "passed": true, "evidence": "未掰断词/塞虚字/夹英文，整句重写对齐"},
+        {"text": "招牌句贴原句句式/情绪，顺口不跑味", "passed": true, "evidence": "'只你共我'→'有你共我'保留深情句式，平移成团队感"}
+      ],
+      "notes": ["招牌句问题已修复：明确保留并贴着原句改"]
+    },
+    {
+      "eval_id": 0,
+      "eval_name": "annual-meeting-rewrite",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 0.857, "passed": 6, "failed": 1, "total": 7, "time_seconds": 24.3, "tokens": 11361, "tool_calls": 2, "errors": 0},
+      "expectations": [
+        {"text": "改编词句数与原词一致（4句）", "passed": true, "evidence": "4句"},
+        {"text": "每句字数与原词逐句对齐", "passed": false, "evidence": "check_syllables.py 实跑：第1句14字≠原13字 ✗"},
+        {"text": "主题贯穿团队/年会/一起拼搏", "passed": true, "evidence": "扛过风雨/熬过来/明年向前冲"},
+        {"text": "句尾押韵、读起来顺口", "passed": true, "evidence": "雨/下/来/你，与原词同为松韵"},
+        {"text": "干净成品带结构标注", "passed": true, "evidence": "有标题段落，尾句'只我和你（们）'略生硬"},
+        {"text": "用词自然通顺、不凑字", "passed": true, "evidence": "基本无凑字"},
+        {"text": "招牌句贴原句句式/情绪，顺口不跑味", "passed": true, "evidence": "本轮保留'只我和你'"}
+      ],
+      "notes": ["首句仍超1字；招牌句这轮基线碰巧保住了"]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "programmer-parody",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 1.0, "passed": 6, "failed": 0, "total": 6, "time_seconds": 64.5, "tokens": 17861, "tool_calls": 7, "errors": 0},
+      "expectations": [
+        {"text": "改编词句数与原词一致（4句）", "passed": true, "evidence": "4句"},
+        {"text": "每句字数与原词逐句对齐", "passed": true, "evidence": "check_syllables.py 实跑 7/7/7/5 全✓"},
+        {"text": "程序员/加班吐槽主题", "passed": true, "evidence": "空机房/不下班/线上/不肯睡"},
+        {"text": "有具体好笑的梗", "passed": true, "evidence": "不下班=硬气、线上事故、再惨不哭只是不肯睡"},
+        {"text": "与原词谐音或句式呼应", "passed": true, "evidence": "逐句套原句式，全押-ang"},
+        {"text": "用词自然通顺、不凑字", "passed": true, "evidence": "避开'下一班'式掰词，'不下班模样'自然，无英文"}
+      ],
+      "notes": ["凑字问题已修复：用'不下班模样'替代基线的'下一班'掰词"]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "programmer-parody",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 0.667, "passed": 4, "failed": 2, "total": 6, "time_seconds": 33.9, "tokens": 11343, "tool_calls": 2, "errors": 0},
+      "expectations": [
+        {"text": "改编词句数与原词一致（4句）", "passed": true, "evidence": "核心4句（另附多段）"},
+        {"text": "每句字数与原词逐句对齐", "passed": false, "evidence": "第1句8字≠原7字；多句带括注散文远超字数 ✗"},
+        {"text": "程序员/加班吐槽主题", "passed": true, "evidence": "改Bug/需求文档/线上崩"},
+        {"text": "有具体好笑的梗", "passed": true, "evidence": "椅子塌了、眼泪滴坏键盘、带薪蹲马桶"},
+        {"text": "与原词谐音或句式呼应", "passed": true, "evidence": "保留'不跪/对峙'句式"},
+        {"text": "用词自然通顺、不凑字", "passed": false, "evidence": "'脊梁——其实是椅子塌了起不来'散文补白不可唱；夹Bug/commit/PM英文 ✗"}
+      ],
+      "notes": ["可唱性最差：括注散文+英文混入"]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "milktea-promo-multiversion",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 1.0, "passed": 6, "failed": 0, "total": 6, "time_seconds": 108.0, "tokens": 22041, "tool_calls": 10, "errors": 0},
+      "expectations": [
+        {"text": "给出2个不同版本", "passed": true, "evidence": "甜宠可爱版+魔性叫卖版"},
+        {"text": "每个版本逐句字数与原词对齐", "passed": true, "evidence": "check_syllables.py 实跑 v1/v2 均 10/8/12/11 全✓"},
+        {"text": "奶茶店开业宣传主题", "passed": true, "evidence": "小奶茶/珍珠/开业免费/全城最火"},
+        {"text": "两版风格不同且各有定位", "passed": true, "evidence": "店内循环/短视频 vs 大喇叭/地推喊麦"},
+        {"text": "有重复洗脑记忆点", "passed": true, "evidence": "两版均保留'火火火火'，开业=生意火一语双关"},
+        {"text": "用词自然通顺、不凑字", "passed": true, "evidence": "无掰词/废字/英文；自检抓到V2第3句11字并改回12字"}
+      ],
+      "notes": ["招牌句'火火火火'原样保留，没被换成英文"]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "milktea-promo-multiversion",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 0.667, "passed": 4, "failed": 2, "total": 6, "time_seconds": 43.1, "tokens": 11715, "tool_calls": 2, "errors": 0},
+      "expectations": [
+        {"text": "给出2个不同版本", "passed": true, "evidence": "甜蜜可爱风+活力魔性风"},
+        {"text": "每个版本逐句字数与原词对齐", "passed": false, "evidence": "check_syllables.py 实跑：V1第3句13≠12；V2三处不齐 ✗"},
+        {"text": "奶茶店开业宣传主题", "passed": true, "evidence": "开业/第一杯免费/买一送一"},
+        {"text": "两版风格不同且各有定位", "passed": true, "evidence": "甜风vs燥风，附使用小贴士"},
+        {"text": "有重复洗脑记忆点", "passed": true, "evidence": "喝喝喝喝 / GO GO GO GO"},
+        {"text": "用词自然通顺、不凑字", "passed": false, "evidence": "招牌位用'GO GO GO GO'英文顶替'火火火火'、'哦哦哦哦'凑数 ✗"}
+      ],
+      "notes": ["招牌位换成英文GO GO GO GO，丢了原曲记忆点"]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 85.6, "stddev": 17.8, "min": 64.5, "max": 108.0},
+      "tokens": {"mean": 19987, "stddev": 1709, "min": 17861, "max": 22041}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.73, "stddev": 0.09, "min": 0.667, "max": 0.857},
+      "time_seconds": {"mean": 33.8, "stddev": 7.7, "min": 24.3, "max": 43.1},
+      "tokens": {"mean": 11473, "stddev": 168, "min": 11343, "max": 11715}
+    },
+    "delta": {
+      "pass_rate": "+0.27",
+      "time_seconds": "+51.8",
+      "tokens": "+8514"
+    }
+  },
+  "notes": [
+    "新增两条断言（'用词自然通顺不凑字'、'招牌句贴原句'）正是上一轮 review 暴露的盲区——它们让 with/without 的差距从 +0.13 拉大到 +0.27，因为基线恰恰栽在这两点上。",
+    "改进生效：eval1 用'不下班模样'替代基线的掰词'下一班'；eval0 招牌句'有你共我'贴住'只你共我'；eval2 招牌句'火火火火'原样保留。带 skill 三个用例 19/19 全过。",
+    "基线本轮失败模式高度一致：字数仍翻车(eval0首句14≠13、eval2两版多处不齐)，且靠英文(Bug/GO GO GO GO)和散文括注凑数——正是 skill 明令禁止的。",
+    "成本与上轮持平：skill 约 86s / 20k token vs 基线 34s / 11.5k；增量花在读 SKILL.md + 出声读自检。",
+    "注意:子任务 Bash 被沙箱拦截，check_syllables.py 由主控统一复跑核对(见各 grading.evidence)。"
+  ]
+}

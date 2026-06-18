@@ -1,0 +1,8 @@
+{"expectations":[
+ {"text":"给出2个不同版本","passed":true,"evidence":"甜蜜可爱风+活力魔性风"},
+ {"text":"每个版本逐句字数与原词对齐","passed":false,"evidence":"check_syllables.py 实跑：V1第3句13≠12；V2三处不齐(10/8/11位) ✗"},
+ {"text":"奶茶店开业宣传主题","passed":true,"evidence":"开业/第一杯免费/买一送一"},
+ {"text":"两版风格不同且各有定位","passed":true,"evidence":"甜风vs燥风，附使用小贴士"},
+ {"text":"有重复洗脑记忆点","passed":true,"evidence":"喝喝喝喝 / GO GO GO GO"},
+ {"text":"用词自然通顺、不凑字","passed":false,"evidence":"招牌位用'GO GO GO GO'英文顶替'火火火火'、'哦哦哦哦'凑数 ✗"}
+]}

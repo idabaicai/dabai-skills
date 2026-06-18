@@ -1,0 +1,127 @@
+{
+  "metadata": {
+    "skill_name": "lyric-rewrite",
+    "skill_path": "/Users/liuhui/AI/dabai-skills/lyric-rewrite",
+    "executor_model": "claude (general-purpose subagent)",
+    "analyzer_model": "claude-opus-4-8",
+    "timestamp": "2026-06-18T09:45:00Z",
+    "evals_run": [0, 1, 2],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "eval_name": "annual-meeting-rewrite",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 1.0, "passed": 5, "failed": 0, "total": 5, "time_seconds": 75.3, "tokens": 20618, "tool_calls": 13, "errors": 0},
+      "expectations": [
+        {"text": "改编词句数与原词一致（4句）", "passed": true, "evidence": "4 句副歌一一对应"},
+        {"text": "每句字数与原词逐句对齐", "passed": true, "evidence": "check_syllables.py 实跑 13/9/10/10 全 ✓"},
+        {"text": "主题贯穿团队/年会/一起拼搏", "passed": true, "evidence": "并肩扛过坎坷/熬过寒冬/还有你共我"},
+        {"text": "句尾押韵、读起来顺口", "passed": true, "evidence": "过/缩押 -uo，结尾'我'沿用原词尾音"},
+        {"text": "干净成品带结构标注", "passed": true, "evidence": "带 [副歌] 标注，标题注明原曲"}
+      ],
+      "notes": ["此用例较简单，基线也能对齐"]
+    },
+    {
+      "eval_id": 0,
+      "eval_name": "annual-meeting-rewrite",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 1.0, "passed": 5, "failed": 0, "total": 5, "time_seconds": 22.6, "tokens": 11219, "tool_calls": 2, "errors": 0},
+      "expectations": [
+        {"text": "改编词句数与原词一致（4句）", "passed": true, "evidence": "4 句"},
+        {"text": "每句字数与原词逐句对齐", "passed": true, "evidence": "check_syllables.py 实跑 13/9/10/10 全 ✓"},
+        {"text": "主题贯穿团队/年会/一起拼搏", "passed": true, "evidence": "并肩奋战/难关都跨过/向前冲"},
+        {"text": "句尾押韵、读起来顺口", "passed": true, "evidence": "手/过/过/冲，大体顺口"},
+        {"text": "干净成品带结构标注", "passed": true, "evidence": "标题标'·副歌'，段落清晰"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "programmer-parody",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 1.0, "passed": 5, "failed": 0, "total": 5, "time_seconds": 96.4, "tokens": 20873, "tool_calls": 11, "errors": 0},
+      "expectations": [
+        {"text": "改编词句数与原词一致（4句）", "passed": true, "evidence": "check_syllables.py 实跑 7/7/7/5 全 ✓；子任务中途自检发现首稿8字超标并改回7字"},
+        {"text": "每句字数与原词逐句对齐", "passed": true, "evidence": "7/7/7/5 全 ✓"},
+        {"text": "程序员/加班吐槽主题", "passed": true, "evidence": "蹲机房/秃头/硬刚甲方/改一行"},
+        {"text": "有具体好笑的梗", "passed": true, "evidence": "秃头发际线、甲方=绝望本望、死活不改最后一行"},
+        {"text": "与原词谐音或句式呼应", "passed": true, "evidence": "不跪→秃头(同位)、哭一场→改一行(háng同韵)、全押 -ang"}
+      ],
+      "notes": ["体现了 skill 的自检价值：中途抓到字数超标并修正"]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "programmer-parody",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 0.8, "passed": 4, "failed": 1, "total": 5, "time_seconds": 27.1, "tokens": 11248, "tool_calls": 2, "errors": 0},
+      "expectations": [
+        {"text": "改编词句数与原词一致（4句）", "passed": true, "evidence": "核心4句（另附加长版）"},
+        {"text": "每句字数与原词逐句对齐", "passed": false, "evidence": "check_syllables.py 实跑：第1句'爱你孤身改 BUG'仅5字≠原7字，英文BUG破坏字数 ✗"},
+        {"text": "程序员/加班吐槽主题", "passed": true, "evidence": "改BUG/排期/下一班"},
+        {"text": "有具体好笑的梗", "passed": true, "evidence": "凌晨四点工位、PM'小改动'、老板别在身后"},
+        {"text": "与原词谐音或句式呼应", "passed": true, "evidence": "不跪→不睡 谐音（首句呼应弱）"}
+      ],
+      "notes": ["字数翻车：英文词破坏可唱性"]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "milktea-promo-multiversion",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 1.0, "passed": 5, "failed": 0, "total": 5, "time_seconds": 91.4, "tokens": 20095, "tool_calls": 10, "errors": 0},
+      "expectations": [
+        {"text": "给出2个不同版本", "passed": true, "evidence": "甜萌洗脑版 + 魔性叫卖版"},
+        {"text": "每个版本逐句字数与原词对齐", "passed": true, "evidence": "check_syllables.py 实跑 v1/v2 均 10/8/12/11 全 ✓"},
+        {"text": "奶茶店开业宣传主题", "passed": true, "evidence": "小奶茶/珍珠/开业半价/排队"},
+        {"text": "两版风格不同且各有定位", "passed": true, "evidence": "V1店内循环/短视频，V2大喇叭/地推喊麦"},
+        {"text": "有重复洗脑记忆点", "passed": true, "evidence": "两版都用'喝喝喝喝'对位'火火火火'"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "milktea-promo-multiversion",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 0.8, "passed": 4, "failed": 1, "total": 5, "time_seconds": 33.4, "tokens": 11374, "tool_calls": 2, "errors": 0},
+      "expectations": [
+        {"text": "给出2个不同版本", "passed": true, "evidence": "甜蜜撒娇风 + 热闹喊麦风"},
+        {"text": "每个版本逐句字数与原词对齐", "passed": false, "evidence": "check_syllables.py 实跑：两版第3句均11字≠原12字 ✗"},
+        {"text": "奶茶店开业宣传主题", "passed": true, "evidence": "小奶茶/小料/新店开张/第一杯半价"},
+        {"text": "两版风格不同且各有定位", "passed": true, "evidence": "撒娇风vs喊麦风，附使用小贴士"},
+        {"text": "有重复洗脑记忆点", "passed": true, "evidence": "滋滋滋滋/来来来来"}
+      ],
+      "notes": ["字数翻车：两版第3句都少1字"]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 87.7, "stddev": 9.0, "min": 75.3, "max": 96.4},
+      "tokens": {"mean": 20528, "stddev": 339, "min": 20095, "max": 20873}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.87, "stddev": 0.09, "min": 0.8, "max": 1.0},
+      "time_seconds": {"mean": 27.7, "stddev": 4.4, "min": 22.6, "max": 33.4},
+      "tokens": {"mean": 11280, "stddev": 65, "min": 11219, "max": 11374}
+    },
+    "delta": {
+      "pass_rate": "+0.13",
+      "time_seconds": "+60.0",
+      "tokens": "+9248"
+    }
+  },
+  "notes": [
+    "核心差异全在『字数对齐』(可唱性) 这一项：带 skill 的 3 个用例 15/15 断言全过；基线在 eval1(英文BUG致首句5≠7)和 eval2(两版第3句11≠12)各挂 1 项。",
+    "其余维度(主题/梗/多版本/押韵)两边大致相当——说明 skill 的增量主要是把可唱性这个硬约束钉死，而非创意本身。",
+    "eval0(年会版)基线也满分：字数差异不大的简单改编基线能自行对齐，skill 价值在更难的 parody/多版本场景更明显。",
+    "成本代价：skill 让单次耗时约 28s→88s、token 约 11k→20.5k 翻倍，主要花在读 SKILL.md + 逐句自检；对追求可唱性的任务值得。",
+    "注意:本环境子任务 Bash 被沙箱拦截，未能实跑 check_syllables.py；字数对齐由主控用脚本统一复核(见各 grading.evidence)。"
+  ]
+}

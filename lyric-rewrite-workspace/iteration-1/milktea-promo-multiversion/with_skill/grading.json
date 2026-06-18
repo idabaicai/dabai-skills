@@ -1,0 +1,7 @@
+{"expectations":[
+ {"text":"给出2个不同版本","passed":true,"evidence":"甜萌洗脑版 + 魔性叫卖版"},
+ {"text":"每个版本逐句字数与原词对齐","passed":true,"evidence":"check_syllables.py 实跑 v1/v2 均 10/8/12/11 全部 ✓"},
+ {"text":"奶茶店开业宣传主题","passed":true,"evidence":"小奶茶/珍珠/开业半价/排队"},
+ {"text":"两版风格不同且各有定位","passed":true,"evidence":"V1店内循环/短视频，V2大喇叭/地推喊麦，各有定位"},
+ {"text":"有重复洗脑记忆点","passed":true,"evidence":"两版都用'喝喝喝喝'对位原词'火火火火'"}
+]}

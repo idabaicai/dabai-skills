@@ -1,0 +1,20 @@
+{
+  "reviews": [
+    {
+      "run_id": "programmer-parody-with_skill",
+      "feedback": "\u8fd9\u4e2a\u4e0d\u9519",
+      "timestamp": "2026-06-18T09:53:27.121Z"
+    },
+    {
+      "run_id": "annual-meeting-rewrite-without_skill",
+      "feedback": "\u54ea\u8fd8\u6015\u660e\u5e74\u53ea\u7ba1\u5411\u524d\u51b2\uff0c\u8fd9\u4e00\u53e5\u7684\u5473\u9053\u4e0d\u5bf9\uff0c\u5531\u8d77\u6765\u4e5f\u4e0d\u987a\u53e3\uff0c\u8bf7\u4f18\u5316\u3002",
+      "timestamp": "2026-06-18T09:53:27.121Z"
+    },
+    {
+      "run_id": "programmer-parody-without_skill",
+      "feedback": "\u4e0d\u8981\u51fa\u73b0\uff1a\u4e0d\u80af\u4e0b\u4e00\u73ed\u3001\u4e0d\u80af\u8bf7\u4e00\u5047",
+      "timestamp": "2026-06-18T09:53:27.121Z"
+    }
+  ],
+  "status": "in_progress"
+}

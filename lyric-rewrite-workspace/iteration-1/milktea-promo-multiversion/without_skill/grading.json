@@ -1,0 +1,7 @@
+{"expectations":[
+ {"text":"给出2个不同版本","passed":true,"evidence":"甜蜜撒娇风 + 热闹喊麦风"},
+ {"text":"每个版本逐句字数与原词对齐","passed":false,"evidence":"check_syllables.py 实跑：两版第3句均11字≠原12字 ✗"},
+ {"text":"奶茶店开业宣传主题","passed":true,"evidence":"小奶茶/小料/新店开张/第一杯半价"},
+ {"text":"两版风格不同且各有定位","passed":true,"evidence":"撒娇风vs喊麦风，附使用小贴士"},
+ {"text":"有重复洗脑记忆点","passed":true,"evidence":"滋滋滋滋/来来来来"}
+]}

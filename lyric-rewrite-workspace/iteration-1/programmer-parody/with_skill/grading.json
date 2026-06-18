@@ -1,0 +1,7 @@
+{"expectations":[
+ {"text":"改编词句数与原词一致（4句）","passed":true,"evidence":"4 句副歌"},
+ {"text":"每句字数与原词逐句对齐","passed":true,"evidence":"check_syllables.py 实跑：7/7/7/5 全部 ✓"},
+ {"text":"程序员/加班吐槽主题","passed":true,"evidence":"蹲机房/秃头/硬刚甲方/改一行"},
+ {"text":"有具体好笑的梗","passed":true,"evidence":"秃头发际线、甲方=绝望本望、死活不肯改最后一行"},
+ {"text":"与原词谐音或句式呼应","passed":true,"evidence":"不跪→秃头(同位)、哭一场→改一行(háng同韵)、全押-ang"}
+]}

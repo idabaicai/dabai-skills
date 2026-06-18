@@ -1,0 +1,7 @@
+{"expectations":[
+ {"text":"改编词句数与原词一致（4句）","passed":true,"evidence":"核心4句（另附加长版）"},
+ {"text":"每句字数与原词逐句对齐","passed":false,"evidence":"check_syllables.py 实跑：第1句'爱你孤身改 BUG'仅5字≠原7字，英文BUG破坏字数 ✗"},
+ {"text":"程序员/加班吐槽主题","passed":true,"evidence":"改BUG/排期/下一班"},
+ {"text":"有具体好笑的梗","passed":true,"evidence":"凌晨四点工位、PM'小改动'、唱到下一班请确保老板不在"},
+ {"text":"与原词谐音或句式呼应","passed":true,"evidence":"不跪→不睡 谐音呼应（但首句呼应较弱）"}
+]}

@@ -1,0 +1,8 @@
+{"expectations":[
+ {"text":"改编词句数与原词一致（4句）","passed":true,"evidence":"4句"},
+ {"text":"每句字数与原词逐句对齐","passed":true,"evidence":"check_syllables.py 实跑 7/7/7/5 全✓"},
+ {"text":"程序员/加班吐槽主题","passed":true,"evidence":"空机房/不下班/线上/不肯睡"},
+ {"text":"有具体好笑的梗","passed":true,"evidence":"不下班=硬气、线上事故、再惨不哭只是不肯睡"},
+ {"text":"与原词谐音或句式呼应","passed":true,"evidence":"逐句套原句式，全押-ang(房/样/上/场)"},
+ {"text":"用词自然通顺、不凑字","passed":true,"evidence":"避开了'下一班'式掰词，'不下班模样'自然顺口，无英文"}
+]}

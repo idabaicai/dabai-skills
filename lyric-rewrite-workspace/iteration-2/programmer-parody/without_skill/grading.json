@@ -1,0 +1,8 @@
+{"expectations":[
+ {"text":"改编词句数与原词一致（4句）","passed":true,"evidence":"核心4句（另附多段）"},
+ {"text":"每句字数与原词逐句对齐","passed":false,"evidence":"第1句'爱你孤身改 Bug 到天亮'8字≠原7字；多句带括注散文远超字数 ✗"},
+ {"text":"程序员/加班吐槽主题","passed":true,"evidence":"改Bug/需求文档/线上崩"},
+ {"text":"有具体好笑的梗","passed":true,"evidence":"椅子塌了、眼泪滴坏键盘、带薪蹲马桶"},
+ {"text":"与原词谐音或句式呼应","passed":true,"evidence":"保留'不跪/对峙'句式"},
+ {"text":"用词自然通顺、不凑字","passed":false,"evidence":"'脊梁——其实是椅子塌了起不来'为散文式补白不可唱；夹 Bug/commit/PM 英文 ✗"}
+]}
