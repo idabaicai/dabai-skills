@@ -1,0 +1,10 @@
+{"expectations":[
+{"text":"soft/hard landing 译法正确","passed":true,"evidence":"软着陆；硬着陆"},
+{"text":"Fed→美联储、two 25bp cuts→两次降息25个基点","passed":true,"evidence":"美联储将在年底前实施两次 25 个基点的降息"},
+{"text":"Overweight/Underweight 译为超配/低配","passed":true,"evidence":"上调至超配；保持低配"},
+{"text":"duration→久期、term premium→期限溢价","passed":true,"evidence":"缩短久期；期限溢价可能上升"},
+{"text":"cyclicals/defensives/small caps 译法正确","passed":true,"evidence":"周期性板块、小盘股、防御性板块"},
+{"text":"yield curve dis-inverts 方向正确","passed":true,"evidence":"收益率曲线由倒挂转为正常化"},
+{"text":"core PCE→核心PCE、risk-on→风险偏好上升","passed":true,"evidence":"核心 PCE 通胀；风险偏好（risk-on）"},
+{"text":"立场与限定词分寸保留","passed":true,"evidence":"硬着陆虽然并非我们的基准情形"}
+]}

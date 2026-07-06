@@ -1,0 +1,11 @@
+Aurora Semiconductor (ASX.O) | Initiating at Buy | PT $145 (28% upside)
+
+We initiate coverage of Aurora Semiconductor at Buy with a 12-month price target of $145, implying 28% upside from current levels. Aurora is well-positioned to benefit from the secular ramp in AI accelerator demand, and we believe consensus is underestimating the durability of its gross margin expansion.
+
+Investment thesis. Aurora's advanced packaging capacity is effectively sold out through FY26, giving the company meaningful pricing power. We forecast revenue CAGR of 34% over FY25-27 and see gross margin expanding ~450bps to 61% by FY27 as mix shifts toward higher-ASP HBM-adjacent products. Management guided FY25 revenue up at the last print, and we sit ~6% above the Street on FY26 EPS.
+
+Catalysts. We see three near-term catalysts: (1) the Q3 print in late October, where we expect a modest beat and a guide-up; (2) a potential second large hyperscaler customer, which could add $1.2bn to the FY26 revenue base; and (3) capacity expansion updates at the November analyst day.
+
+Key risks. A sharp correction in AI capex would be a material headwind. We are also cautious on the concentration risk, as the top two customers account for ~55% of revenue. A faster-than-expected de-rating of the broader semis complex could weigh on the multiple even if fundamentals hold.
+
+Valuation. Our $145 PT is based on 32x our FY26 EPS estimate of $4.53, a premium to the peer group that we think is justified by Aurora's superior growth and returns profile (ROIC of 28% vs. peers at ~19%). On EV/EBITDA, the stock trades at 18x NTM, roughly in line with high-growth semi peers.

@@ -1,0 +1,10 @@
+{"expectations":[
+{"text":"EPS 上调 4%/7%/9% 正确","passed":true,"evidence":"分别上调 4%/7%/9%"},
+{"text":"Overweight 译为增持","passed":true,"evidence":"维持增持（Overweight）评级"},
+{"text":"目标价上调至 HK$92 由 HK$81，港元保留","passed":true,"evidence":"从 81 港元上调至 92 港元"},
+{"text":"财务表 Markdown 重建","passed":true,"evidence":"完整 Markdown 表格"},
+{"text":"表格数字不错位","passed":true,"evidence":"Revenue FY27=84,120；EPS FY26=4.61；EBITDA FY25E=12,950 均正确"},
+{"text":"FY24A/FY25E A=实际E=预测标注","passed":true,"evidence":"FY24A（2024 财年实际）；A = 实际值，E = 预测值"},
+{"text":"net cash 译为净现金","passed":true,"evidence":"净负债/EBITDA … 净现金"},
+{"text":"币种单位 HK$ mn 表头注明","passed":true,"evidence":"单位：百万港元"}
+]}

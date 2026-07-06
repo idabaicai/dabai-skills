@@ -1,0 +1,15 @@
+{
+  "eval_id": 1,
+  "eval_name": "estimates-table-numbers",
+  "prompt": "翻译一下 estimates_table.txt 这段，含那张财务预测表",
+  "assertions": [
+    {"text": "EPS 上调幅度 4%/7%/9% 三个数字正确对应 FY25/FY26/FY27", "type": "manual"},
+    {"text": "评级 Overweight 译为『增持』", "type": "manual"},
+    {"text": "目标价上调至 HK$92（由 HK$81）正确，港元币种保留", "type": "manual"},
+    {"text": "财务表以 Markdown 表格重建，结构完整", "type": "manual"},
+    {"text": "表格数字与原文一致且不错位（抽查 Revenue FY27=84,120、EPS FY26=4.61、EBITDA FY25E=12,950）", "type": "auto"},
+    {"text": "FY24A/FY25E 的 A=实际、E=预测标注正确翻译", "type": "manual"},
+    {"text": "net cash 译为『净现金』而非误译", "type": "manual"},
+    {"text": "币种单位 HK$ mn 在表头注明（如『百万港元』）", "type": "manual"}
+  ]
+}

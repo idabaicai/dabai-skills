@@ -1,0 +1,12 @@
+{"expectations":[
+{"text":"三货币目标价变动准确不混：Longsys Rmb300→673、SIMO US$155→400、Phison NT$2,248→2,588","passed":true,"evidence":"表格：人民币300→673、155→400美元、新台币2,248→2,588，币种正确"},
+{"text":"MS 评级：Overweight→增持、Equal-weight→与大盘持平；OW/EW 处理","passed":true,"evidence":"增持（OW）；中性（EW）"},
+{"text":"Industry View: Attractive 译出","passed":false,"evidence":"抬头只有『全球科技』和日期，遗漏了行业观点：具吸引力（Attractive）"},
+{"text":"韩元 W300bn+ 正确识别为韩元","passed":true,"evidence":"超过 3,000 亿韩元（W300bn+）"},
+{"text":"行话中译+首次括注英文","passed":true,"evidence":"LTA/FCF/EUV/HBM4E/eSSD/FIFO/CSP/QLC 括注"},
+{"text":"分寸保留未加码","passed":true,"evidence":"lukewarm→不温不火；muted→低迷；周期性而非可持续"},
+{"text":"Exhibit 1 表格重建、货币正确、数字不错位","passed":false,"evidence":"整张 Exhibit 1 评级/目标价表被当作『纯数据图表页』整体略过，未重建——丢失了全报告信息密度最高的表"},
+{"text":"免责声明按 skill 跳过并注明","passed":true,"evidence":"末尾注：末尾免责声明页亦略过"},
+{"text":"首页抬头信息（含分析师团队）保留","passed":false,"evidence":"顶部分析师团队名单与行业观点均缺失（仅保留各公司段落的分析师署名）"},
+{"text":"关键数字保留：3Q +50-60%、MonTitan 5/13/19、SIMO 23x 2027e","passed":true,"evidence":"三季度 50%–60%；MonTitan 5%/13%/19%；23 倍 2027 年预期 EPS"}
+]}

@@ -1,0 +1,17 @@
+{
+  "eval_id": 0,
+  "eval_name": "ms-nand-real-pdf",
+  "prompt": "翻译这份摩根士丹利 NAND 行业研报（36 页 PDF，翻译核心研究正文与目标价变动表）",
+  "assertions": [
+    {"text": "三种货币的目标价变动准确且币种不混：Longsys Rmb300→Rmb673、SIMO US$155→US$400、Phison NT$2,248→NT$2,588", "type": "manual"},
+    {"text": "MS 评级体系正确：Overweight→增持、Equal-weight→与大盘持平/中性；OW/EW 缩写正确处理", "type": "manual"},
+    {"text": "Industry View: Attractive 译为『行业观点：具吸引力/看好』", "type": "manual"},
+    {"text": "韩元 W300bn+ 正确识别为韩元（不误作美元/人民币）", "type": "manual"},
+    {"text": "行话中译+首次括注英文：LTA（长期协议）、eSSD、FIFO、HBM/HBM4E、EUV、TCM、CSP、QLC、FCF、ASP", "type": "manual"},
+    {"text": "分寸保留未加码：meaningful operating leverage→可观、lukewarm/muted demand→温和/清淡、structurally scaling→结构性扩张", "type": "manual"},
+    {"text": "Exhibit 1 表格（若翻译）交易货币 KRW/TWD/USD/JPY/CNY 正确、数字不错位（抽查 SIMO PT=400、Phison PT=2,588、Longsys current=667.8）", "type": "manual"},
+    {"text": "末尾法律免责声明按 skill 指引跳过并一句话注明，未逐字硬翻", "type": "manual"},
+    {"text": "首页抬头信息（Global Technology / 日期 / 分析师 / What's Changed）保留，结构清晰", "type": "manual"},
+    {"text": "关键数字保留：3Q 涨价 50-60%、MonTitan 占比 5%/13%/19% (2026e/2027e/2028e)、SIMO 23x 2027e EPS", "type": "manual"}
+  ]
+}

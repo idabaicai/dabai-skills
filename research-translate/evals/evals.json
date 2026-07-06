@@ -1,0 +1,23 @@
+{
+  "skill_name": "research-translate",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "帮我把这份研报翻译成中文，文件是 equity_note.txt",
+      "expected_output": "忠实全文中文译文，保留研报结构（评级/目标价抬头、投资逻辑、催化剂、风险、估值）。评级 Buy 译为买入，目标价 $145 正确，限定词分寸保留（modest=温和、meaningful=可观、well-positioned=有望受益、cautious=谨慎），术语首次出现括注英文（CAGR/EPS/EV/EBITDA/ROIC/HBM/ASP/bps），$1.2bn 换算为 12 亿美元且币种保留。",
+      "files": ["files/equity_note.txt"]
+    },
+    {
+      "id": 1,
+      "prompt": "翻译一下 estimates_table.txt 这段，含那张财务预测表",
+      "expected_output": "预测调整段落忠实翻译（上调 EPS 4%/7%/9%、维持增持 Overweight、目标价上调至 HK$92 由 HK$81），财务表用 Markdown 重建，表头译成中文、数字原样不错位、币种 HK$ 保留、FY24A/FY25E 等标注正确、net cash 译为净现金、Net debt/EBITDA 处理正确。",
+      "files": ["files/estimates_table.txt"]
+    },
+    {
+      "id": 2,
+      "prompt": "这篇宏观策略报告翻成中文，文件 macro_strategy.txt",
+      "expected_output": "忠实翻译，宏观术语规范（soft landing=软着陆、core PCE=核心PCE、Fed=美联储、25bp cuts=降息25个基点、yield curve dis-inverts=收益率曲线倒挂修复、Overweight/Underweight equities=超配/低配、duration=久期、risk-on=风险偏好、term premium=期限溢价、cyclicals/defensives=周期股/防御股）。评级立场分寸保留。",
+      "files": ["files/macro_strategy.txt"]
+    }
+  ]
+}

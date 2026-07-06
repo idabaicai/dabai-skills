@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "skill_name": "research-translate",
+    "skill_path": "/Users/liuhui/AI/dabai-skills/research-translate",
+    "executor_model": "claude-opus-4-8",
+    "timestamp": "2026-07-06T00:00:00Z",
+    "evals_run": ["ms-nand-real-pdf"],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 0, "eval_name": "ms-nand-real-pdf", "configuration": "with_skill", "run_number": 1,
+      "result": {"pass_rate": 1.0, "passed": 10, "failed": 0, "total": 10, "time_seconds": 191.4, "tokens": 46589, "errors": 0},
+      "expectations": [
+        {"text": "Exhibit 1 评级/目标价表重建、数字不错位", "passed": true, "evidence": "12 行表完整重建，SIMO 400/317/26% 等全对"},
+        {"text": "Industry View: Attractive 译出", "passed": true, "evidence": "行业观点：具吸引力（Attractive）"},
+        {"text": "SanDisk 目标价<现价异常如实标注", "passed": true, "evidence": "译者说明4：PT 1,750<现价 2,273.7，照实呈现未修正"}
+      ],
+      "notes": ["重建了全报告信息密度最高的 Exhibit 1 评级/目标价表", "主动标注 SanDisk PT<现价 的原文异常（忠实/边界原则）", "三货币+韩元+日元五币种全部区分正确"]
+    },
+    {
+      "eval_id": 0, "eval_name": "ms-nand-real-pdf", "configuration": "without_skill", "run_number": 1,
+      "result": {"pass_rate": 0.8, "passed": 8, "failed": 2, "total": 10, "time_seconds": 113.1, "tokens": 24987, "errors": 0},
+      "expectations": [
+        {"text": "Exhibit 1 评级/目标价表重建", "passed": false, "evidence": "整表当作『纯数据图表页』略过，未重建"},
+        {"text": "Industry View: Attractive 译出", "passed": false, "evidence": "抬头遗漏行业观点"},
+        {"text": "首页分析师团队保留", "passed": false, "evidence": "顶部分析师名单缺失"}
+      ],
+      "notes": ["把 Exhibit 1 评级/目标价表当作图表整体丢弃——报告最关键的数据表", "抬头遗漏行业观点(Attractive)与分析师团队", "正文翻译质量与 with_skill 接近"]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 191.4, "stddev": 0.0, "min": 191.4, "max": 191.4},
+      "tokens": {"mean": 46589, "stddev": 0, "min": 46589, "max": 46589}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.8, "stddev": 0.0, "min": 0.8, "max": 0.8},
+      "time_seconds": {"mean": 113.1, "stddev": 0.0, "min": 113.1, "max": 113.1},
+      "tokens": {"mean": 24987, "stddev": 0, "min": 24987, "max": 24987}
+    },
+    "delta": {
+      "pass_rate": "+0.20",
+      "time_seconds": "+78.3",
+      "tokens": "+21602"
+    }
+  },
+  "notes": [
+    "真实 36 页 PDF 才把技能价值压出来：差距从 iteration-1 的 +4pt 拉大到 +20pt。",
+    "最关键的一处：基线把 Exhibit 1（评级/目标价/现价/上行空间总表，全报告信息密度最高的表）当成『纯图表页』整张丢弃；技能版按『表格是核心资产，用 Markdown 重建』把 12 家公司的评级与三/五币种目标价完整重建且数字零误差。",
+    "技能版还主动标注了 SanDisk 目标价(1,750)低于现价(2,273.7)、却仍维持增持的原文异常——这正是 skill『如实说明边界、不擅自修正』原则的体现；基线因跳过表格根本没发现。",
+    "抬头信息：技能版保留了完整分析师团队 + 行业观点(Attractive)；基线两者都漏了。",
+    "代价：技能版多花约 78 秒、多用约 2.2 万 tokens（读 PDF 全文层 + 重建大表）。对研报翻译这种低频高价值任务，这个成本换来关键数据表不丢失，非常划算。",
+    "五币种(Rmb/US$/NT$/KRW/JPY)两版都区分正确，未默认成美元——说明 glossary 的币种警示与模型本身都到位。"
+  ]
+}

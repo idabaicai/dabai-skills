@@ -1,0 +1,15 @@
+{
+  "eval_id": 0,
+  "eval_name": "equity-note-rating-hedging",
+  "prompt": "帮我把这份研报翻译成中文，文件是 equity_note.txt",
+  "assertions": [
+    {"text": "评级 Buy 译为『买入』，未误译为其他档位", "type": "manual"},
+    {"text": "目标价 $145 及 28% 上行空间数字正确保留", "type": "manual"},
+    {"text": "$1.2bn 换算为『12 亿美元』，且保留美元币种", "type": "manual"},
+    {"text": "限定词分寸保留未加码：modest→温和/meaningful→可观/cautious→谨慎/well-positioned→有望受益", "type": "manual"},
+    {"text": "金融术语首次出现括注英文（CAGR/EBITDA/ROIC/HBM/ASP/EPS 等大部分括注）", "type": "manual"},
+    {"text": "FY26 等译为『财年』，bps 译为『基点』，Street 译为一致预期/卖方一致预期", "type": "manual"},
+    {"text": "保留研报结构与小标题（投资逻辑/催化剂/风险/估值）", "type": "manual"},
+    {"text": "未擅自添加原文没有的编者观点或评论", "type": "manual"}
+  ]
+}

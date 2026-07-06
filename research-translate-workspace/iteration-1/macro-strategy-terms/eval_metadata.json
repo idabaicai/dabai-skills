@@ -1,0 +1,15 @@
+{
+  "eval_id": 2,
+  "eval_name": "macro-strategy-terms",
+  "prompt": "这篇宏观策略报告翻成中文，文件 macro_strategy.txt",
+  "assertions": [
+    {"text": "soft landing→软着陆、hard landing→硬着陆", "type": "manual"},
+    {"text": "Fed→美联储、two 25bp cuts→两次降息25个基点", "type": "manual"},
+    {"text": "Overweight/Underweight（资产配置语境）译为超配/低配，而非增持/减持", "type": "manual"},
+    {"text": "duration→久期、term premium→期限溢价", "type": "manual"},
+    {"text": "cyclicals/defensives→周期股/防御股、small caps→小盘股", "type": "manual"},
+    {"text": "yield curve dis-inverts→收益率曲线倒挂修复/结束倒挂（方向正确）", "type": "manual"},
+    {"text": "core PCE→核心PCE、risk-on→风险偏好上升", "type": "manual"},
+    {"text": "分析师立场与限定词分寸保留，未加码减码", "type": "manual"}
+  ]
+}

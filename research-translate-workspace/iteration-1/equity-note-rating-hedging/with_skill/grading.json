@@ -1,0 +1,10 @@
+{"expectations":[
+{"text":"评级 Buy 译为『买入』","passed":true,"evidence":"给予买入评级"},
+{"text":"目标价 $145 及 28% 上行空间正确","passed":true,"evidence":"目标价 145 美元（上行空间 28%）"},
+{"text":"$1.2bn 换算为『12 亿美元』且保留美元","passed":true,"evidence":"可能为 2026 财年收入基数增加 12 亿美元"},
+{"text":"限定词分寸保留未加码","passed":true,"evidence":"meaningful→可观的定价权；modest beat→温和超预期；cautious→持谨慎态度；well-positioned→处于有利地位"},
+{"text":"术语首次出现括注英文","passed":true,"evidence":"复合年增长率（CAGR）、平均售价（ASP）、企业价值倍数（EV/EBITDA）、投入资本回报率 ROIC 等"},
+{"text":"FY→财年、bps→基点、Street→一致预期","passed":true,"evidence":"2025—27 财年；450 个基点；市场一致预期（Street）"},
+{"text":"保留结构小标题","passed":true,"evidence":"投资逻辑/催化剂/主要风险/估值"},
+{"text":"未擅自添加编者观点","passed":true,"evidence":"无添加内容"}
+]}
