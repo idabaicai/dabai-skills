@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 标题格式：中文报告标题 | 中英对照 -->
+<title>【报告中文标题】 | 中英对照</title>
+<style>
+  :root {
+    --text: #1a1d23;
+    --text-en: #8a8f98;
+    --accent: #1a56db;
+    --rule: #e5e7eb;
+    --bg: #ffffff;
+    --bg-soft: #f7f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #e6e8eb;
+      --text-en: #7d838c;
+      --accent: #6b9bf5;
+      --rule: #2e333b;
+      --bg: #14161a;
+      --bg-soft: #1d2026;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.8;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 48px 24px 96px; }
+
+  /* ===== 报告头部：机构、日期、评级摘要 ===== */
+  header.report-head { border-bottom: 2px solid var(--text); padding-bottom: 24px; margin-bottom: 40px; }
+  .head-meta { font-size: 13px; color: var(--text-en); margin-bottom: 12px; letter-spacing: 0.02em; }
+  h1 .en { display: block; font-size: 15px; font-weight: 500; color: var(--text-en); margin-bottom: 6px; }
+  h1 .zh { display: block; font-size: 28px; font-weight: 700; line-height: 1.4; }
+  /* 评级/目标价摘要框（若原报告有）：用 .rating-box */
+  .rating-box {
+    display: flex; flex-wrap: wrap; gap: 24px;
+    background: var(--bg-soft); border-radius: 8px;
+    padding: 14px 20px; margin-top: 20px; font-size: 14px;
+  }
+  .rating-box b { color: var(--accent); }
+
+  /* ===== 章节标题（中英对照） ===== */
+  h2 { margin: 48px 0 20px; line-height: 1.4; }
+  h2 .en { display: block; font-size: 13px; font-weight: 500; color: var(--text-en); margin-bottom: 2px; }
+  h2 .zh { display: block; font-size: 21px; font-weight: 700; border-left: 4px solid var(--accent); padding-left: 12px; }
+  h3 { margin: 32px 0 14px; }
+  h3 .en { display: block; font-size: 12px; font-weight: 500; color: var(--text-en); }
+  h3 .zh { display: block; font-size: 17px; font-weight: 600; }
+
+  /* ===== 对照块：英文原文在上（小灰字），中文译文在下 ===== */
+  .pair { margin-bottom: 26px; }
+  .pair .en {
+    font-size: 13.5px; line-height: 1.65; color: var(--text-en);
+    margin-bottom: 8px; padding-left: 14px;
+    border-left: 2px solid var(--rule);
+  }
+  .pair .zh { font-size: 16px; }
+
+  /* ===== 列表对照：逐条对照，每个 li 内英文一行、中文一行 ===== */
+  .pair-list { list-style: none; padding-left: 0; margin: 0 0 26px; }
+  .pair-list li { position: relative; padding-left: 1.6em; margin-bottom: 14px; }
+  .pair-list li > .en { display: block; font-size: 13.5px; line-height: 1.65; color: var(--text-en); margin-bottom: 2px; }
+  .pair-list li > .zh { display: block; font-size: 16px; }
+  ul.pair-list li::before {
+    content: "•"; position: absolute; left: 0.35em; top: 0;
+    color: var(--accent); font-weight: 700;
+  }
+  ol.pair-list { counter-reset: pl; }
+  ol.pair-list li { counter-increment: pl; padding-left: 2.2em; }
+  ol.pair-list li::before {
+    content: counter(pl) "."; position: absolute; left: 0; top: 0;
+    color: var(--accent); font-weight: 600; font-variant-numeric: tabular-nums;
+  }
+
+  /* ===== 数据表格 ===== */
+  /* 横向滚动条主题化：默认滚动条在暗色模式下是亮白色，很突兀 */
+  .table-wrap {
+    overflow-x: auto; margin: 24px 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rule) transparent;
+  }
+  .table-wrap::-webkit-scrollbar { height: 8px; }
+  .table-wrap::-webkit-scrollbar-track { background: transparent; }
+  .table-wrap::-webkit-scrollbar-thumb {
+    background: var(--rule); border-radius: 4px;
+    border: 2px solid transparent; background-clip: padding-box;
+  }
+  .table-wrap::-webkit-scrollbar-thumb:hover { background: var(--text-en); background-clip: padding-box; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; white-space: nowrap; }
+  caption { text-align: left; font-size: 13px; color: var(--text-en); padding-bottom: 8px; }
+  th, td { border: 1px solid var(--rule); padding: 7px 12px; text-align: right; }
+  th:first-child, td:first-child { text-align: left; }
+  thead th { background: var(--bg-soft); font-weight: 600; }
+
+  /* ===== 图片占位块 ===== */
+  .figure-placeholder {
+    background: var(--bg-soft); border: 1px dashed var(--rule); border-radius: 8px;
+    padding: 20px; margin: 24px 0; font-size: 13.5px; color: var(--text-en); text-align: center;
+  }
+  .figure-placeholder .zh { color: var(--text); }
+
+  /* ===== 折叠的免责声明 ===== */
+  details.disclaimer { margin-top: 56px; border-top: 1px solid var(--rule); padding-top: 20px; }
+  details.disclaimer summary { cursor: pointer; font-size: 14px; color: var(--text-en); }
+  details.disclaimer .pair { margin-top: 18px; }
+  details.disclaimer .pair .zh { font-size: 13.5px; color: var(--text-en); }
+
+  /* ===== 页脚 ===== */
+  footer.trans-note {
+    margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule);
+    font-size: 12.5px; color: var(--text-en);
+  }
+
+  /* ===== 语言切换（中文 / 对照 / EN） ===== */
+  .lang-switch {
+    position: fixed; top: 16px; right: 16px; z-index: 10;
+    display: flex; gap: 2px;
+    background: var(--bg-soft); border: 1px solid var(--rule);
+    border-radius: 999px; padding: 3px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  }
+  .lang-switch button {
+    border: 0; background: transparent; color: var(--text-en);
+    font: inherit; font-size: 13px; line-height: 1.4;
+    padding: 4px 14px; border-radius: 999px; cursor: pointer;
+  }
+  .lang-switch button.active { background: var(--accent); color: #fff; }
+
+  /* 三种阅读模式：默认中英对照；mode-zh 只显示中文；mode-en 只显示英文 */
+  body.mode-zh .en { display: none !important; }
+  body.mode-en .zh { display: none !important; }
+  /* 纯英文模式下，英文从“参考小字”升级为正文样式 */
+  body.mode-en .pair .en { font-size: 16px; line-height: 1.7; color: var(--text); border-left: none; padding-left: 0; }
+  body.mode-en .pair-list li > .en { font-size: 16px; line-height: 1.7; color: var(--text); }
+  body.mode-en h1 .en { font-size: 28px; font-weight: 700; color: var(--text); margin-bottom: 0; }
+  body.mode-en h2 .en { font-size: 21px; font-weight: 700; color: var(--text); border-left: 4px solid var(--accent); padding-left: 12px; }
+  body.mode-en h3 .en { font-size: 17px; font-weight: 600; color: var(--text); }
+
+  /* 表格 caption 的双语两行显示 */
+  caption .en, caption .zh { display: block; }
+
+  /* 纯文字表格（如方案对比）：左对齐、允许换行 */
+  table.text th, table.text td { text-align: left; white-space: normal; }
+
+  @media print {
+    .page { max-width: none; padding: 0; }
+    .pair { break-inside: avoid; }
+    .lang-switch { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 语言切换：由页尾脚本控制 body 上的 mode-zh / mode-en class -->
+<div class="lang-switch" role="group" aria-label="语言切换">
+  <button data-mode="zh">中文</button>
+  <button data-mode="both" class="active">对照</button>
+  <button data-mode="en">EN</button>
+</div>
+
+<div class="page">
+
+  <header class="report-head">
+    <div class="head-meta"><!-- 机构名 · 报告日期 · 分析师（如有） --></div>
+    <h1>
+      <span class="en"><!-- 英文原标题 --></span>
+      <span class="zh"><!-- 中文译标题 --></span>
+    </h1>
+    <!-- 如原报告有评级/目标价摘要，填入；没有则删除整个 rating-box -->
+    <div class="rating-box">
+      <span>评级：<b><!-- 买入 --></b></span>
+      <span>目标价：<b><!-- $000 --></b></span>
+      <span>现价：<span><!-- $000 --></span></span>
+    </div>
+  </header>
+
+  <!-- ============ 正文：按原文结构重复以下模式 ============ -->
+
+  <h2><span class="en"><!-- Section Title --></span><span class="zh"><!-- 章节标题 --></span></h2>
+
+  <div class="pair">
+    <p class="en"><!-- 英文原文段落 --></p>
+    <p class="zh"><!-- 中文译文段落 --></p>
+  </div>
+
+  <!-- 列表：逐条对照。不要把整个列表的英文/中文拆成两个 ul——条目一多对照关系就断了。
+       有序列表用 <ol class="pair-list">，序号由 CSS 计数器生成，不要在文字里手写编号。
+  <ul class="pair-list">
+    <li>
+      <span class="en">English bullet text</span>
+      <span class="zh">中文条目译文</span>
+    </li>
+  </ul>
+  -->
+
+  <!-- 图片占位示例：
+  <div class="figure-placeholder">
+    <div class="en">Figure 3: Quarterly Revenue Trend</div>
+    <div class="zh">图 3：季度营收走势（原文为图表，此处未提取）</div>
+  </div>
+  -->
+
+  <!-- 表格示例（表头译中文，数字原样）：
+  <div class="table-wrap">
+    <table>
+      <caption>表 1：盈利预测摘要（Earnings Summary）</caption>
+      <thead><tr><th>指标</th><th>FY2025</th><th>FY2026E</th></tr></thead>
+      <tbody><tr><td>营收（百万美元）</td><td>1,234</td><td>1,580</td></tr></tbody>
+    </table>
+  </div>
+  -->
+
+  <!-- ============ 免责声明（折叠） ============ -->
+  <details class="disclaimer">
+    <summary>免责声明与合规披露（Disclaimer & Disclosures）</summary>
+    <div class="pair">
+      <p class="en"><!-- 原文 --></p>
+      <p class="zh"><!-- 译文 --></p>
+    </div>
+  </details>
+
+  <footer class="trans-note">
+    本页为 AI 辅助翻译的中英对照版本，仅供参考，请以英文原文为准。原文：<!-- 来源文件名或 URL --> · 翻译日期：<!-- YYYY-MM-DD -->
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var btns = document.querySelectorAll('.lang-switch button');
+  function setMode(m) {
+    document.body.classList.remove('mode-zh', 'mode-en');
+    if (m !== 'both') document.body.classList.add('mode-' + m);
+    btns.forEach(function (b) { b.classList.toggle('active', b.dataset.mode === m); });
+    try { localStorage.setItem('report-lang-mode', m); } catch (e) {}
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { setMode(b.dataset.mode); }); });
+  var saved = 'both';
+  try { saved = localStorage.getItem('report-lang-mode') || 'both'; } catch (e) {}
+  setMode(saved);
+})();
+</script>
+</body>
+</html>
